@@ -1,0 +1,509 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4BE22A1A1D026F2E00A710F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE22A191D026F2E00A710F8 /* AppDelegate.swift */; };
+		4BE22A1C1D026F2E00A710F8 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE22A1B1D026F2E00A710F8 /* FirstViewController.swift */; };
+		4BE22A1E1D026F2E00A710F8 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE22A1D1D026F2E00A710F8 /* SecondViewController.swift */; };
+		4BE22A211D026F2E00A710F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BE22A1F1D026F2E00A710F8 /* Main.storyboard */; };
+		4BE22A231D026F2E00A710F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BE22A221D026F2E00A710F8 /* Assets.xcassets */; };
+		4BE22A261D026F2E00A710F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BE22A241D026F2E00A710F8 /* LaunchScreen.storyboard */; };
+		4BE22A311D026F2E00A710F8 /* SleepAidTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE22A301D026F2E00A710F8 /* SleepAidTests.swift */; };
+		4BE22A3C1D026F2E00A710F8 /* SleepAidUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE22A3B1D026F2E00A710F8 /* SleepAidUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4BE22A2D1D026F2E00A710F8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4BE22A0E1D026F2E00A710F8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4BE22A151D026F2E00A710F8;
+			remoteInfo = SleepAid;
+		};
+		4BE22A381D026F2E00A710F8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4BE22A0E1D026F2E00A710F8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4BE22A151D026F2E00A710F8;
+			remoteInfo = SleepAid;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4BE22A161D026F2E00A710F8 /* SleepAid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SleepAid.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4BE22A191D026F2E00A710F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4BE22A1B1D026F2E00A710F8 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		4BE22A1D1D026F2E00A710F8 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		4BE22A201D026F2E00A710F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4BE22A221D026F2E00A710F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4BE22A251D026F2E00A710F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4BE22A271D026F2E00A710F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4BE22A2C1D026F2E00A710F8 /* SleepAidTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SleepAidTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4BE22A301D026F2E00A710F8 /* SleepAidTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepAidTests.swift; sourceTree = "<group>"; };
+		4BE22A321D026F2E00A710F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4BE22A371D026F2E00A710F8 /* SleepAidUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SleepAidUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4BE22A3B1D026F2E00A710F8 /* SleepAidUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepAidUITests.swift; sourceTree = "<group>"; };
+		4BE22A3D1D026F2E00A710F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4BE22A131D026F2E00A710F8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4BE22A291D026F2E00A710F8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4BE22A341D026F2E00A710F8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4BE22A0D1D026F2E00A710F8 = {
+			isa = PBXGroup;
+			children = (
+				4BE22A181D026F2E00A710F8 /* SleepAid */,
+				4BE22A2F1D026F2E00A710F8 /* SleepAidTests */,
+				4BE22A3A1D026F2E00A710F8 /* SleepAidUITests */,
+				4BE22A171D026F2E00A710F8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4BE22A171D026F2E00A710F8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4BE22A161D026F2E00A710F8 /* SleepAid.app */,
+				4BE22A2C1D026F2E00A710F8 /* SleepAidTests.xctest */,
+				4BE22A371D026F2E00A710F8 /* SleepAidUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4BE22A181D026F2E00A710F8 /* SleepAid */ = {
+			isa = PBXGroup;
+			children = (
+				4BE22A191D026F2E00A710F8 /* AppDelegate.swift */,
+				4BE22A1B1D026F2E00A710F8 /* FirstViewController.swift */,
+				4BE22A1D1D026F2E00A710F8 /* SecondViewController.swift */,
+				4BE22A1F1D026F2E00A710F8 /* Main.storyboard */,
+				4BE22A221D026F2E00A710F8 /* Assets.xcassets */,
+				4BE22A241D026F2E00A710F8 /* LaunchScreen.storyboard */,
+				4BE22A271D026F2E00A710F8 /* Info.plist */,
+			);
+			path = SleepAid;
+			sourceTree = "<group>";
+		};
+		4BE22A2F1D026F2E00A710F8 /* SleepAidTests */ = {
+			isa = PBXGroup;
+			children = (
+				4BE22A301D026F2E00A710F8 /* SleepAidTests.swift */,
+				4BE22A321D026F2E00A710F8 /* Info.plist */,
+			);
+			path = SleepAidTests;
+			sourceTree = "<group>";
+		};
+		4BE22A3A1D026F2E00A710F8 /* SleepAidUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4BE22A3B1D026F2E00A710F8 /* SleepAidUITests.swift */,
+				4BE22A3D1D026F2E00A710F8 /* Info.plist */,
+			);
+			path = SleepAidUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4BE22A151D026F2E00A710F8 /* SleepAid */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4BE22A401D026F2E00A710F8 /* Build configuration list for PBXNativeTarget "SleepAid" */;
+			buildPhases = (
+				4BE22A121D026F2E00A710F8 /* Sources */,
+				4BE22A131D026F2E00A710F8 /* Frameworks */,
+				4BE22A141D026F2E00A710F8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SleepAid;
+			productName = SleepAid;
+			productReference = 4BE22A161D026F2E00A710F8 /* SleepAid.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4BE22A2B1D026F2E00A710F8 /* SleepAidTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4BE22A431D026F2E00A710F8 /* Build configuration list for PBXNativeTarget "SleepAidTests" */;
+			buildPhases = (
+				4BE22A281D026F2E00A710F8 /* Sources */,
+				4BE22A291D026F2E00A710F8 /* Frameworks */,
+				4BE22A2A1D026F2E00A710F8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4BE22A2E1D026F2E00A710F8 /* PBXTargetDependency */,
+			);
+			name = SleepAidTests;
+			productName = SleepAidTests;
+			productReference = 4BE22A2C1D026F2E00A710F8 /* SleepAidTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4BE22A361D026F2E00A710F8 /* SleepAidUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4BE22A461D026F2E00A710F8 /* Build configuration list for PBXNativeTarget "SleepAidUITests" */;
+			buildPhases = (
+				4BE22A331D026F2E00A710F8 /* Sources */,
+				4BE22A341D026F2E00A710F8 /* Frameworks */,
+				4BE22A351D026F2E00A710F8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4BE22A391D026F2E00A710F8 /* PBXTargetDependency */,
+			);
+			name = SleepAidUITests;
+			productName = SleepAidUITests;
+			productReference = 4BE22A371D026F2E00A710F8 /* SleepAidUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4BE22A0E1D026F2E00A710F8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = MobileStar;
+				TargetAttributes = {
+					4BE22A151D026F2E00A710F8 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					4BE22A2B1D026F2E00A710F8 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 4BE22A151D026F2E00A710F8;
+					};
+					4BE22A361D026F2E00A710F8 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 4BE22A151D026F2E00A710F8;
+					};
+				};
+			};
+			buildConfigurationList = 4BE22A111D026F2E00A710F8 /* Build configuration list for PBXProject "SleepAid" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4BE22A0D1D026F2E00A710F8;
+			productRefGroup = 4BE22A171D026F2E00A710F8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4BE22A151D026F2E00A710F8 /* SleepAid */,
+				4BE22A2B1D026F2E00A710F8 /* SleepAidTests */,
+				4BE22A361D026F2E00A710F8 /* SleepAidUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4BE22A141D026F2E00A710F8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BE22A261D026F2E00A710F8 /* LaunchScreen.storyboard in Resources */,
+				4BE22A231D026F2E00A710F8 /* Assets.xcassets in Resources */,
+				4BE22A211D026F2E00A710F8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4BE22A2A1D026F2E00A710F8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4BE22A351D026F2E00A710F8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4BE22A121D026F2E00A710F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BE22A1E1D026F2E00A710F8 /* SecondViewController.swift in Sources */,
+				4BE22A1A1D026F2E00A710F8 /* AppDelegate.swift in Sources */,
+				4BE22A1C1D026F2E00A710F8 /* FirstViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4BE22A281D026F2E00A710F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BE22A311D026F2E00A710F8 /* SleepAidTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4BE22A331D026F2E00A710F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BE22A3C1D026F2E00A710F8 /* SleepAidUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4BE22A2E1D026F2E00A710F8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4BE22A151D026F2E00A710F8 /* SleepAid */;
+			targetProxy = 4BE22A2D1D026F2E00A710F8 /* PBXContainerItemProxy */;
+		};
+		4BE22A391D026F2E00A710F8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4BE22A151D026F2E00A710F8 /* SleepAid */;
+			targetProxy = 4BE22A381D026F2E00A710F8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4BE22A1F1D026F2E00A710F8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4BE22A201D026F2E00A710F8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4BE22A241D026F2E00A710F8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4BE22A251D026F2E00A710F8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4BE22A3E1D026F2E00A710F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4BE22A3F1D026F2E00A710F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4BE22A411D026F2E00A710F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SleepAid/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = enriquealonso.SleepAid;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		4BE22A421D026F2E00A710F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SleepAid/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = enriquealonso.SleepAid;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		4BE22A441D026F2E00A710F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SleepAidTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = enriquealonso.SleepAidTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SleepAid.app/SleepAid";
+			};
+			name = Debug;
+		};
+		4BE22A451D026F2E00A710F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SleepAidTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = enriquealonso.SleepAidTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SleepAid.app/SleepAid";
+			};
+			name = Release;
+		};
+		4BE22A471D026F2E00A710F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SleepAidUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = enriquealonso.SleepAidUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SleepAid;
+			};
+			name = Debug;
+		};
+		4BE22A481D026F2E00A710F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SleepAidUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = enriquealonso.SleepAidUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SleepAid;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4BE22A111D026F2E00A710F8 /* Build configuration list for PBXProject "SleepAid" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4BE22A3E1D026F2E00A710F8 /* Debug */,
+				4BE22A3F1D026F2E00A710F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4BE22A401D026F2E00A710F8 /* Build configuration list for PBXNativeTarget "SleepAid" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4BE22A411D026F2E00A710F8 /* Debug */,
+				4BE22A421D026F2E00A710F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		4BE22A431D026F2E00A710F8 /* Build configuration list for PBXNativeTarget "SleepAidTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4BE22A441D026F2E00A710F8 /* Debug */,
+				4BE22A451D026F2E00A710F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		4BE22A461D026F2E00A710F8 /* Build configuration list for PBXNativeTarget "SleepAidUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4BE22A471D026F2E00A710F8 /* Debug */,
+				4BE22A481D026F2E00A710F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4BE22A0E1D026F2E00A710F8 /* Project object */;
+}
