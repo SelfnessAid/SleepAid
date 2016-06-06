@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B196EAE1D027C4E00A2B61C /* AlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B196EAD1D027C4E00A2B61C /* AlarmViewController.swift */; };
+		4B196EB01D048D9100A2B61C /* AlarmViewTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B196EAF1D048D9100A2B61C /* AlarmViewTableCell.swift */; };
+		4B196EB21D051BEF00A2B61C /* AddAlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B196EB11D051BEE00A2B61C /* AddAlarmViewController.swift */; };
+		4B196EB41D055EE100A2B61C /* AddAlarmTitleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B196EB31D055EE100A2B61C /* AddAlarmTitleViewController.swift */; };
 		4BE22A1A1D026F2E00A710F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE22A191D026F2E00A710F8 /* AppDelegate.swift */; };
-		4BE22A1C1D026F2E00A710F8 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE22A1B1D026F2E00A710F8 /* FirstViewController.swift */; };
-		4BE22A1E1D026F2E00A710F8 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE22A1D1D026F2E00A710F8 /* SecondViewController.swift */; };
 		4BE22A211D026F2E00A710F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BE22A1F1D026F2E00A710F8 /* Main.storyboard */; };
 		4BE22A231D026F2E00A710F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BE22A221D026F2E00A710F8 /* Assets.xcassets */; };
 		4BE22A261D026F2E00A710F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BE22A241D026F2E00A710F8 /* LaunchScreen.storyboard */; };
@@ -35,10 +37,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4B196EAD1D027C4E00A2B61C /* AlarmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmViewController.swift; sourceTree = "<group>"; };
+		4B196EAF1D048D9100A2B61C /* AlarmViewTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmViewTableCell.swift; sourceTree = "<group>"; };
+		4B196EB11D051BEE00A2B61C /* AddAlarmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddAlarmViewController.swift; sourceTree = "<group>"; };
+		4B196EB31D055EE100A2B61C /* AddAlarmTitleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddAlarmTitleViewController.swift; sourceTree = "<group>"; };
 		4BE22A161D026F2E00A710F8 /* SleepAid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SleepAid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BE22A191D026F2E00A710F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4BE22A1B1D026F2E00A710F8 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		4BE22A1D1D026F2E00A710F8 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		4BE22A201D026F2E00A710F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4BE22A221D026F2E00A710F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4BE22A251D026F2E00A710F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -76,6 +80,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4B196EAC1D027C0E00A2B61C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4B196EAD1D027C4E00A2B61C /* AlarmViewController.swift */,
+				4B196EAF1D048D9100A2B61C /* AlarmViewTableCell.swift */,
+				4B196EB11D051BEE00A2B61C /* AddAlarmViewController.swift */,
+				4B196EB31D055EE100A2B61C /* AddAlarmTitleViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		4BE22A0D1D026F2E00A710F8 = {
 			isa = PBXGroup;
 			children = (
@@ -99,9 +114,8 @@
 		4BE22A181D026F2E00A710F8 /* SleepAid */ = {
 			isa = PBXGroup;
 			children = (
+				4B196EAC1D027C0E00A2B61C /* Controller */,
 				4BE22A191D026F2E00A710F8 /* AppDelegate.swift */,
-				4BE22A1B1D026F2E00A710F8 /* FirstViewController.swift */,
-				4BE22A1D1D026F2E00A710F8 /* SecondViewController.swift */,
 				4BE22A1F1D026F2E00A710F8 /* Main.storyboard */,
 				4BE22A221D026F2E00A710F8 /* Assets.xcassets */,
 				4BE22A241D026F2E00A710F8 /* LaunchScreen.storyboard */,
@@ -259,9 +273,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4BE22A1E1D026F2E00A710F8 /* SecondViewController.swift in Sources */,
+				4B196EB21D051BEF00A2B61C /* AddAlarmViewController.swift in Sources */,
+				4B196EB41D055EE100A2B61C /* AddAlarmTitleViewController.swift in Sources */,
+				4B196EB01D048D9100A2B61C /* AlarmViewTableCell.swift in Sources */,
+				4B196EAE1D027C4E00A2B61C /* AlarmViewController.swift in Sources */,
 				4BE22A1A1D026F2E00A710F8 /* AppDelegate.swift in Sources */,
-				4BE22A1C1D026F2E00A710F8 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,6 +502,7 @@
 				4BE22A421D026F2E00A710F8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4BE22A431D026F2E00A710F8 /* Build configuration list for PBXNativeTarget "SleepAidTests" */ = {
 			isa = XCConfigurationList;
@@ -494,6 +511,7 @@
 				4BE22A451D026F2E00A710F8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4BE22A461D026F2E00A710F8 /* Build configuration list for PBXNativeTarget "SleepAidUITests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +520,7 @@
 				4BE22A481D026F2E00A710F8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
