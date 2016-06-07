@@ -1,0 +1,17 @@
+//
+//  Prefix.pch
+//  SleepAid
+//
+//  Created by MobileStar on 6/6/16.
+//  Copyright © 2016 MobileStar. All rights reserved.
+//
+
+#ifndef Prefix_pch
+#define Prefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+@import Common
+
+#endif /* Prefix_pch */

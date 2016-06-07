@@ -153,7 +153,7 @@
         <!--AddAlarm-->
         <scene sceneID="nu8-eD-mZz">
             <objects>
-                <tableViewController title="Home" id="okr-Xc-qJP" userLabel="AddAlarm" customClass="AddAlarmViewController" customModule="SleepAid" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="AddAlarmViewControllerIdentifier" title="Home" id="okr-Xc-qJP" userLabel="AddAlarm" customClass="AddAlarmViewController" customModule="SleepAid" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="216" sectionHeaderHeight="28" sectionFooterHeight="28" id="eDl-VU-xWi">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -269,7 +269,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Wake up" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lMk-ca-6BG">
-                                                    <rect key="frame" x="91" y="21" width="468" height="21"/>
+                                                    <rect key="frame" x="91" y="21" width="196" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
@@ -336,6 +336,16 @@
                         <barButtonItem key="rightBarButtonItem" title="Done" id="lM8-ba-Ncm"/>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="FriLabel" destination="McM-8K-e2Z" id="oYn-4C-6Vj"/>
+                        <outlet property="MonLabel" destination="EdE-zV-Mi3" id="3R3-15-Na9"/>
+                        <outlet property="SatLabel" destination="Wt5-pc-tck" id="Fp4-Be-0yr"/>
+                        <outlet property="SunLabel" destination="Jhr-Xq-6QP" id="ajq-E3-qdp"/>
+                        <outlet property="ThuLabel" destination="RDa-Xd-X4w" id="LfU-JR-iug"/>
+                        <outlet property="TueLabel" destination="i6G-OK-epK" id="LgE-df-9xr"/>
+                        <outlet property="WedLabel" destination="8P7-RQ-Yyf" id="mWn-uh-zEf"/>
+                        <outlet property="alarmTitleLabel" destination="lMk-ca-6BG" id="XfS-f3-uUw"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fuc-3A-b63" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -344,7 +354,7 @@
         <!--Add Alarm Title View Controller-->
         <scene sceneID="5ZL-ln-hIt">
             <objects>
-                <viewController id="Tnf-fl-uf9" customClass="AddAlarmTitleViewController" customModule="SleepAid" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddAlarmTitleViewControllerIdentifier" id="Tnf-fl-uf9" customClass="AddAlarmTitleViewController" customModule="SleepAid" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="iOB-HV-Ph5"/>
                         <viewControllerLayoutGuide type="bottom" id="IJI-Sb-TAf"/>
@@ -360,6 +370,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Tnf-fl-uf9" id="AGL-26-Ncr"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
