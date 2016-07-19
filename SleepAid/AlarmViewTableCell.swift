@@ -10,19 +10,23 @@ import UIKit
 
 class AlarmViewTableCell: UITableViewCell {
 
-    @IBOutlet weak var alarmToggle: UISwitch!
     @IBOutlet weak var alarmDescription: UILabel!
-    @IBOutlet weak var alarmisAM: UILabel!
     @IBOutlet weak var alarmTime: UILabel!
     @IBOutlet weak var alarmTitle: UILabel!
+    @IBOutlet weak var alarmToggle: UISwitch!
+    @IBOutlet weak var alarmIsAM: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        alarmTime.textColor = UIColor(hue: 0.5861, saturation: 0.71, brightness: 0.93, alpha: 1.0)
-        alarmDescription.textColor = UIColor(hue: 0.5861, saturation: 0.71, brightness: 0.93, alpha: 1.0)
-        alarmisAM.textColor = UIColor(hue: 0.5861, saturation: 0.71, brightness: 0.93, alpha: 1.0)
-        alarmTitle.textColor = UIColor(hue: 0.5861, saturation: 0.71, brightness: 0.93, alpha: 1.0)
-        
+        alarmTime.textColor = UIColor.init(red: 0.0, green: 99.0/255.0, blue: 1.0, alpha: 1.0)
+        alarmDescription.textColor = UIColor.init(red: 0.0, green: 99.0/255.0, blue: 1.0, alpha: 1.0)
+        alarmTitle.textColor = UIColor.init(red: 0.0, green: 99.0/255.0, blue: 1.0, alpha: 1.0)
+        alarmIsAM.textColor = UIColor.init(red: 0.0, green: 99.0/255.0, blue: 1.0, alpha: 1.0)
+        alarmToggle.onTintColor = UIColor.init(red: 0.0, green: 99.0/255.0, blue: 1.0, alpha: 1.0)
+        alarmToggle.tintColor = UIColor.clearColor()
+        alarmToggle.backgroundColor = UIColor.init(red: 23.0/255.0, green: 61.0/255.0, blue: 120.0/255.0, alpha: 1.0)
+        alarmToggle.layer.cornerRadius = 16.0
+        self.backgroundColor = UIColor.init(red: 19.0/255.0, green: 21.0/255.0, blue: 51.0/255.0, alpha: 1.0)
     }
     
     override func setSelected(selected: Bool, animated: Bool) {
@@ -32,16 +36,20 @@ class AlarmViewTableCell: UITableViewCell {
     @IBAction func stateChanged(switchState: UISwitch) {
         if switchState.on {
             alarmTitle.hidden = false
-            alarmTime.textColor = UIColor(hue: 0.5861, saturation: 0.71, brightness: 0.93, alpha: 1.0)
-            alarmDescription.textColor = UIColor(hue: 0.5861, saturation: 0.71, brightness: 0.93, alpha: 1.0)
-            alarmisAM.textColor = UIColor(hue: 0.5861, saturation: 0.71, brightness: 0.93, alpha: 1.0)
-            alarmTitle.textColor = UIColor(hue: 0.5861, saturation: 0.71, brightness: 0.93, alpha: 1.0)
+            alarmTime.textColor = UIColor.init(red: 0.0, green: 99.0/255.0, blue: 1.0, alpha: 1.0)
+            alarmDescription.textColor = UIColor.init(red: 0.0, green: 99.0/255.0, blue: 1.0, alpha: 1.0)
+            alarmTitle.textColor = UIColor.init(red: 0.0, green: 99.0/255.0, blue: 1.0, alpha: 1.0)
+            alarmIsAM.textColor = UIColor.init(red: 0.0, green: 99.0/255.0, blue: 1.0, alpha: 1.0)
+            alarmToggle.onTintColor = UIColor.init(red: 0.0, green: 99.0/255.0, blue: 1.0, alpha: 1.0)
         } else {
             alarmTitle.hidden = true
-            alarmTime.textColor = UIColor(hue: 0.5861, saturation: 0.71, brightness: 0.93, alpha: 0.6)
-            alarmDescription.textColor = UIColor(hue: 0.5861, saturation: 0.71, brightness: 0.93, alpha: 0.6)
-            alarmisAM.textColor = UIColor(hue: 0.5861, saturation: 0.71, brightness: 0.93, alpha: 0.6)
-            alarmTitle.textColor = UIColor(hue: 0.5861, saturation: 0.71, brightness: 0.93, alpha: 0.6)
+            alarmTime.textColor = UIColor.init(red: 23.0/255.0, green: 61.0/255.0, blue: 120.0/255.0, alpha: 1.0)
+            alarmDescription.textColor = UIColor.init(red: 23.0/255.0, green: 61.0/255.0, blue: 120.0/255.0, alpha: 1.0)
+            alarmTitle.textColor = UIColor.init(red: 23.0/255.0, green: 61.0/255.0, blue: 120.0/255.0, alpha: 1.0)
+            alarmIsAM.textColor = UIColor.init(red: 23.0/255.0, green: 61.0/255.0, blue: 120.0/255.0, alpha: 1.0)
+            alarmToggle.tintColor = UIColor.clearColor()
         }
     }
+    
+    
 }

@@ -7,10 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B01FDBB1D0B3C3200D89855 /* NotifyViewTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B01FDBA1D0B3C3200D89855 /* NotifyViewTableCell.swift */; };
+		4B01FDBD1D0B692000D89855 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B01FDBC1D0B692000D89855 /* SettingsViewController.swift */; };
+		4B01FDC11D0BBD9700D89855 /* AboutAuthorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B01FDC01D0BBD9700D89855 /* AboutAuthorViewController.swift */; };
+		4B0E93731D13923000B6409B /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0E93721D13923000B6409B /* CustomTabBarController.swift */; };
+		4B0E93751D139DC100B6409B /* CustomNavigationBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0E93741D139DC100B6409B /* CustomNavigationBarController.swift */; };
+		4B0E93781D13AAAD00B6409B /* Sleep Peacefully Alarm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4B0E93761D13AAAD00B6409B /* Sleep Peacefully Alarm.mp3 */; };
+		4B0E93791D13AAAD00B6409B /* Words to live by.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4B0E93771D13AAAD00B6409B /* Words to live by.mp3 */; };
+		4B13E32D1D076D880032B7E5 /* SelectMusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B13E32C1D076D870032B7E5 /* SelectMusicViewController.swift */; };
 		4B196EAE1D027C4E00A2B61C /* AlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B196EAD1D027C4E00A2B61C /* AlarmViewController.swift */; };
 		4B196EB01D048D9100A2B61C /* AlarmViewTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B196EAF1D048D9100A2B61C /* AlarmViewTableCell.swift */; };
 		4B196EB21D051BEF00A2B61C /* AddAlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B196EB11D051BEE00A2B61C /* AddAlarmViewController.swift */; };
 		4B196EB41D055EE100A2B61C /* AddAlarmTitleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B196EB31D055EE100A2B61C /* AddAlarmTitleViewController.swift */; };
+		4B216E571D14A33900F8F786 /* To the end of the world.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4B216E561D14A33900F8F786 /* To the end of the world.mp3 */; };
+		4B2B54FE1D19F2AD0037A338 /* SelectMusicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2B54FD1D19F2AC0037A338 /* SelectMusicTableViewCell.swift */; };
+		4BB2654B1D0D46F4008A9E63 /* FAQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB2654A1D0D46F4008A9E63 /* FAQViewController.swift */; };
+		4BB2654D1D0D50D5008A9E63 /* AnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB2654C1D0D50D5008A9E63 /* AnswerViewController.swift */; };
+		4BB40D611D0897C000AA1F9C /* AlarmList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB40D601D0897C000AA1F9C /* AlarmList.swift */; };
+		4BB40D631D08980200AA1F9C /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB40D621D08980200AA1F9C /* Alarm.swift */; };
+		4BB40D6E1D09878900AA1F9C /* PlayMusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB40D6D1D09878900AA1F9C /* PlayMusicViewController.swift */; };
 		4BC8E4701D062E4200287499 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC8E46F1D062E4200287499 /* Common.swift */; };
 		4BE22A1A1D026F2E00A710F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE22A191D026F2E00A710F8 /* AppDelegate.swift */; };
 		4BE22A211D026F2E00A710F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BE22A1F1D026F2E00A710F8 /* Main.storyboard */; };
@@ -18,6 +33,7 @@
 		4BE22A261D026F2E00A710F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BE22A241D026F2E00A710F8 /* LaunchScreen.storyboard */; };
 		4BE22A311D026F2E00A710F8 /* SleepAidTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE22A301D026F2E00A710F8 /* SleepAidTests.swift */; };
 		4BE22A3C1D026F2E00A710F8 /* SleepAidUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE22A3B1D026F2E00A710F8 /* SleepAidUITests.swift */; };
+		4BE46F921D0ACCE9002F94B1 /* NotifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE46F911D0ACCE9002F94B1 /* NotifyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,11 +54,26 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4B01FDBA1D0B3C3200D89855 /* NotifyViewTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotifyViewTableCell.swift; sourceTree = "<group>"; };
+		4B01FDBC1D0B692000D89855 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		4B01FDC01D0BBD9700D89855 /* AboutAuthorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutAuthorViewController.swift; sourceTree = "<group>"; };
+		4B0E93721D13923000B6409B /* CustomTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
+		4B0E93741D139DC100B6409B /* CustomNavigationBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavigationBarController.swift; sourceTree = "<group>"; };
+		4B0E93761D13AAAD00B6409B /* Sleep Peacefully Alarm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Sleep Peacefully Alarm.mp3"; sourceTree = "<group>"; };
+		4B0E93771D13AAAD00B6409B /* Words to live by.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Words to live by.mp3"; sourceTree = "<group>"; };
 		4B13E32B1D0666F70032B7E5 /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
+		4B13E32C1D076D870032B7E5 /* SelectMusicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectMusicViewController.swift; sourceTree = "<group>"; };
 		4B196EAD1D027C4E00A2B61C /* AlarmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmViewController.swift; sourceTree = "<group>"; };
 		4B196EAF1D048D9100A2B61C /* AlarmViewTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmViewTableCell.swift; sourceTree = "<group>"; };
 		4B196EB11D051BEE00A2B61C /* AddAlarmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddAlarmViewController.swift; sourceTree = "<group>"; };
 		4B196EB31D055EE100A2B61C /* AddAlarmTitleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddAlarmTitleViewController.swift; sourceTree = "<group>"; };
+		4B216E561D14A33900F8F786 /* To the end of the world.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "To the end of the world.mp3"; sourceTree = "<group>"; };
+		4B2B54FD1D19F2AC0037A338 /* SelectMusicTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectMusicTableViewCell.swift; sourceTree = "<group>"; };
+		4BB2654A1D0D46F4008A9E63 /* FAQViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQViewController.swift; sourceTree = "<group>"; };
+		4BB2654C1D0D50D5008A9E63 /* AnswerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerViewController.swift; sourceTree = "<group>"; };
+		4BB40D601D0897C000AA1F9C /* AlarmList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmList.swift; sourceTree = "<group>"; };
+		4BB40D621D08980200AA1F9C /* Alarm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
+		4BB40D6D1D09878900AA1F9C /* PlayMusicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayMusicViewController.swift; sourceTree = "<group>"; };
 		4BC8E46F1D062E4200287499 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		4BE22A161D026F2E00A710F8 /* SleepAid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SleepAid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BE22A191D026F2E00A710F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +87,7 @@
 		4BE22A371D026F2E00A710F8 /* SleepAidUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SleepAidUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BE22A3B1D026F2E00A710F8 /* SleepAidUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepAidUITests.swift; sourceTree = "<group>"; };
 		4BE22A3D1D026F2E00A710F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4BE46F911D0ACCE9002F94B1 /* NotifyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotifyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,8 +122,29 @@
 				4B196EAF1D048D9100A2B61C /* AlarmViewTableCell.swift */,
 				4B196EB11D051BEE00A2B61C /* AddAlarmViewController.swift */,
 				4B196EB31D055EE100A2B61C /* AddAlarmTitleViewController.swift */,
+				4B13E32C1D076D870032B7E5 /* SelectMusicViewController.swift */,
+				4BB40D6D1D09878900AA1F9C /* PlayMusicViewController.swift */,
+				4BE46F911D0ACCE9002F94B1 /* NotifyViewController.swift */,
+				4B01FDBA1D0B3C3200D89855 /* NotifyViewTableCell.swift */,
+				4B01FDBC1D0B692000D89855 /* SettingsViewController.swift */,
+				4B01FDC01D0BBD9700D89855 /* AboutAuthorViewController.swift */,
+				4BB2654A1D0D46F4008A9E63 /* FAQViewController.swift */,
+				4BB2654C1D0D50D5008A9E63 /* AnswerViewController.swift */,
+				4B0E93721D13923000B6409B /* CustomTabBarController.swift */,
+				4B0E93741D139DC100B6409B /* CustomNavigationBarController.swift */,
+				4B2B54FD1D19F2AC0037A338 /* SelectMusicTableViewCell.swift */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		4BB40D641D096B6100AA1F9C /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				4B216E561D14A33900F8F786 /* To the end of the world.mp3 */,
+				4B0E93761D13AAAD00B6409B /* Sleep Peacefully Alarm.mp3 */,
+				4B0E93771D13AAAD00B6409B /* Words to live by.mp3 */,
+			);
+			name = Sounds;
 			sourceTree = "<group>";
 		};
 		4BC8E46E1D062E0300287499 /* Other_Classes */ = {
@@ -99,6 +152,8 @@
 			children = (
 				4BC8E46F1D062E4200287499 /* Common.swift */,
 				4B13E32B1D0666F70032B7E5 /* Prefix.pch */,
+				4BB40D621D08980200AA1F9C /* Alarm.swift */,
+				4BB40D601D0897C000AA1F9C /* AlarmList.swift */,
 			);
 			name = Other_Classes;
 			sourceTree = "<group>";
@@ -126,6 +181,7 @@
 		4BE22A181D026F2E00A710F8 /* SleepAid */ = {
 			isa = PBXGroup;
 			children = (
+				4BB40D641D096B6100AA1F9C /* Sounds */,
 				4BC8E46E1D062E0300287499 /* Other_Classes */,
 				4B196EAC1D027C0E00A2B61C /* Controller */,
 				4BE22A191D026F2E00A710F8 /* AppDelegate.swift */,
@@ -259,9 +315,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B216E571D14A33900F8F786 /* To the end of the world.mp3 in Resources */,
 				4BE22A261D026F2E00A710F8 /* LaunchScreen.storyboard in Resources */,
 				4BE22A231D026F2E00A710F8 /* Assets.xcassets in Resources */,
+				4B0E93781D13AAAD00B6409B /* Sleep Peacefully Alarm.mp3 in Resources */,
 				4BE22A211D026F2E00A710F8 /* Main.storyboard in Resources */,
+				4B0E93791D13AAAD00B6409B /* Words to live by.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,11 +345,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B01FDBB1D0B3C3200D89855 /* NotifyViewTableCell.swift in Sources */,
+				4B2B54FE1D19F2AD0037A338 /* SelectMusicTableViewCell.swift in Sources */,
 				4B196EB21D051BEF00A2B61C /* AddAlarmViewController.swift in Sources */,
 				4B196EB41D055EE100A2B61C /* AddAlarmTitleViewController.swift in Sources */,
+				4BB2654B1D0D46F4008A9E63 /* FAQViewController.swift in Sources */,
+				4BB2654D1D0D50D5008A9E63 /* AnswerViewController.swift in Sources */,
+				4BB40D631D08980200AA1F9C /* Alarm.swift in Sources */,
 				4B196EB01D048D9100A2B61C /* AlarmViewTableCell.swift in Sources */,
+				4BB40D6E1D09878900AA1F9C /* PlayMusicViewController.swift in Sources */,
+				4BE46F921D0ACCE9002F94B1 /* NotifyViewController.swift in Sources */,
+				4B01FDC11D0BBD9700D89855 /* AboutAuthorViewController.swift in Sources */,
+				4BB40D611D0897C000AA1F9C /* AlarmList.swift in Sources */,
+				4B13E32D1D076D880032B7E5 /* SelectMusicViewController.swift in Sources */,
+				4B0E93731D13923000B6409B /* CustomTabBarController.swift in Sources */,
 				4B196EAE1D027C4E00A2B61C /* AlarmViewController.swift in Sources */,
+				4B01FDBD1D0B692000D89855 /* SettingsViewController.swift in Sources */,
 				4BC8E4701D062E4200287499 /* Common.swift in Sources */,
+				4B0E93751D139DC100B6409B /* CustomNavigationBarController.swift in Sources */,
 				4BE22A1A1D026F2E00A710F8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -364,7 +436,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Pat Colucci (96ZWSS2R65)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Pat Colucci (96ZWSS2R65)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -386,6 +459,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "d4f46127-2955-4762-be6c-e8acd560cbc3";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -409,7 +483,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Pat Colucci (96ZWSS2R65)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Pat Colucci (96ZWSS2R65)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -424,6 +499,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "d4f46127-2955-4762-be6c-e8acd560cbc3";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -433,10 +509,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Pat Colucci (96ZWSS2R65)";
 				INFOPLIST_FILE = SleepAid/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = enriquealonso.SleepAid;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "d4f46127-2955-4762-be6c-e8acd560cbc3";
 			};
 			name = Debug;
 		};
@@ -444,10 +522,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Pat Colucci (96ZWSS2R65)";
 				INFOPLIST_FILE = SleepAid/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = enriquealonso.SleepAid;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "d4f46127-2955-4762-be6c-e8acd560cbc3";
 			};
 			name = Release;
 		};
