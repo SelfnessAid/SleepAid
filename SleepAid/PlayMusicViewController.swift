@@ -15,8 +15,8 @@ class PlayMusicViewController: UIViewController, AVAudioPlayerDelegate {
     var audioPlayer: AVAudioPlayer! = nil
     var curMusicName = ""
     var curMusicIndex = 0
-    var curMusicUrl:NSURL!
-    var timer: NSTimer!
+    var curMusicUrl:URL!
+    var timer: Timer!
     var musicLength = 0.0
     var musicState = 2
     var musicRate = 1.0
@@ -33,16 +33,14 @@ class PlayMusicViewController: UIViewController, AVAudioPlayerDelegate {
     override func viewDidLoad() {
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        let backgroundImage = UIImage(named: "background.png")
-        self.view.backgroundColor = UIColor(patternImage: backgroundImage!)
-        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+
         
         initComponents()
     }
     
-    override func viewWillDisappear(animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
     }
     
@@ -52,15 +50,15 @@ class PlayMusicViewController: UIViewController, AVAudioPlayerDelegate {
         
         self.aboutAuthorLabel.text = "Berry Zecca"
         self.navigationItem.title = curMusicName
-        self.curMusicUrl = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource(curMusicName, ofType: "mp3")!)
+        self.curMusicUrl = URL(fileURLWithPath: Bundle.main.path(forResource: curMusicName, ofType: "mp3")!)
         self.musicState = 2
         self.musicRate = 1.0
         preparePlay()
     }
     
     func showTotalTime() {
-        let minute_ = abs(Int((musicLength/60) % 60))
-        let second_ = abs(Int(musicLength % 60))
+        let minute_ = abs(Int((musicLength/60).truncatingRemainder(dividingBy: 60)))
+        let second_ = abs(Int(musicLength.truncatingRemainder(dividingBy: 60)))
         
         let minute = minute_ > 9 ? "\(minute_)" : "0\(minute_)"
         let second = second_ > 9 ? "\(second_)" : "0\(second_)"
@@ -70,12 +68,12 @@ class PlayMusicViewController: UIViewController, AVAudioPlayerDelegate {
     
     func preparePlay() {
         do {
-            if let bundle = NSBundle.mainBundle().pathForResource(curMusicName, ofType: "mp3") {
-                let alertSound = NSURL(fileURLWithPath: bundle)
+            if let bundle = Bundle.main.path(forResource: curMusicName, ofType: "mp3") {
+                let alertSound = URL(fileURLWithPath: bundle)
                 try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
                 try AVAudioSession.sharedInstance().setActive(true)
             
-                try audioPlayer = AVAudioPlayer(contentsOfURL: alertSound)
+                try audioPlayer = AVAudioPlayer(contentsOf: alertSound)
                 audioPlayer.delegate = self
                 self.musicLength = audioPlayer.duration
                 self.processBar.maximumValue = CFloat(audioPlayer.duration)
@@ -88,7 +86,7 @@ class PlayMusicViewController: UIViewController, AVAudioPlayerDelegate {
                 showTotalTime()
                 self.curTimeLabel.text = "00:00"
                 
-                let playerItem = AVPlayerItem(URL: alertSound)
+                let playerItem = AVPlayerItem(url: alertSound)
                 let metadataList = playerItem.asset.metadata 
                 
                 for item in metadataList {
@@ -100,8 +98,8 @@ class PlayMusicViewController: UIViewController, AVAudioPlayerDelegate {
                     switch key {
                     case "title" : self.musicTitleLabel.text = value as? String
 ////                    case "artist": artistLabel.text = value as? String
-                    case "artwork" where value is NSData :
-                        self.backImageView.image = UIImage(data: value as! NSData)!
+                    case "artwork" where value is Data :
+                        self.backImageView.image = UIImage(data: value as! Data)!
 
                         break
                     default:
@@ -119,18 +117,18 @@ class PlayMusicViewController: UIViewController, AVAudioPlayerDelegate {
     
     func startTimer() {
         if timer == nil {
-            timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(PlayMusicViewController.update(_:)), userInfo: nil,repeats: true)
+            timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(PlayMusicViewController.update(_:)), userInfo: nil,repeats: true)
             timer.fire()
         }
     }
     
-    func update(timer: NSTimer){
-        if !audioPlayer.playing {
+    func update(_ timer: Timer){
+        if !audioPlayer.isPlaying {
             return
         }
         
-        let minute_ = abs(Int((audioPlayer.currentTime/60) % 60))
-        let second_ = abs(Int(audioPlayer.currentTime  % 60))
+        let minute_ = abs(Int((audioPlayer.currentTime/60).truncatingRemainder(dividingBy: 60)))
+        let second_ = abs(Int(audioPlayer.currentTime.truncatingRemainder(dividingBy: 60)))
         
         let minute = minute_ > 9 ? "\(minute_)" : "0\(minute_)"
         let second = second_ > 9 ? "\(second_)" : "0\(second_)"
@@ -147,8 +145,8 @@ class PlayMusicViewController: UIViewController, AVAudioPlayerDelegate {
     }
     
     func saveCurrentTrackNumber() {
-        NSUserDefaults.standardUserDefaults().setObject(curMusicIndex, forKey:"currentAudioIndex")
-        NSUserDefaults.standardUserDefaults().synchronize()
+        UserDefaults.standard.set(curMusicIndex, forKey:"currentAudioIndex")
+        UserDefaults.standard.synchronize()
     }
     
     func pauseAudioPlayer() {
@@ -164,23 +162,23 @@ class PlayMusicViewController: UIViewController, AVAudioPlayerDelegate {
         updateNowState()
         saveCurrentTrackNumber()
         self.musicState = 0
-        self.prevBtn.enabled = true
+        self.prevBtn.isEnabled = true
 //        self.audioPlayer.rate = 1.0
     }
 
-    @IBAction func playBtnClick(sender: AnyObject) {
+    @IBAction func playBtnClick(_ sender: AnyObject) {
         let play = UIImage(named: "play")
 //        let pause = UIImage(named: "pause")
-        if audioPlayer.playing {
+        if audioPlayer.isPlaying {
 //            pauseAudioPlayer()
 //            self.playBtn.setImage(pause, forState: UIControlState.Normal)
         }else{
             playAudioPlayer()
-            self.playBtn.setImage(play, forState: UIControlState.Normal)
+            self.playBtn.setImage(play, for: UIControlState())
         }
     }
 
-    @IBAction func prevBtnClick(sender: AnyObject) {
+    @IBAction func prevBtnClick(_ sender: AnyObject) {
         audioPlayer.stop()
         audioPlayer.currentTime = 0.0
         self.musicRate = 2.0
@@ -190,7 +188,7 @@ class PlayMusicViewController: UIViewController, AVAudioPlayerDelegate {
         showTotalTime()
     }
 
-    @IBAction func stopBtnClick(sender: AnyObject) {
+    @IBAction func stopBtnClick(_ sender: AnyObject) {
         if self.musicState == 0 {
             audioPlayer.pause()
             self.musicState = 1
@@ -206,9 +204,9 @@ class PlayMusicViewController: UIViewController, AVAudioPlayerDelegate {
         }
     }
     
-    @IBAction func sliderChanged(sender: AnyObject) {
-        let minute_ = abs(Int((processBar.value/60) % 60))
-        let second_ = abs(Int(processBar.value  % 60))
+    @IBAction func sliderChanged(_ sender: AnyObject) {
+        let minute_ = abs(Int((processBar.value/60).truncatingRemainder(dividingBy: 60)))
+        let second_ = abs(Int(processBar.value.truncatingRemainder(dividingBy: 60)))
         let minute = minute_ > 9 ? "\(minute_)" : "0\(minute_)"
         let second = second_ > 9 ? "\(second_)" : "0\(second_)"
         
@@ -217,7 +215,7 @@ class PlayMusicViewController: UIViewController, AVAudioPlayerDelegate {
         self.musicLength = audioPlayer.duration - audioPlayer.currentTime
         showTotalTime()
     }
-    @IBAction func backBtnClick(sender: AnyObject) {
-        self.navigationController?.popViewControllerAnimated(true)
+    @IBAction func backBtnClick(_ sender: AnyObject) {
+        self.navigationController?.popViewController(animated: true)
     }
 }

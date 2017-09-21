@@ -10,39 +10,41 @@ import UIKit
 
 class AboutAuthorViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    @IBOutlet weak var profileImg: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        let backgroundImage = UIImage(named: "background.png")
-        self.view.backgroundColor = UIColor(patternImage: backgroundImage!)
-        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+
+        self.navigationController?.navigationBar.tintColor = UIColor.white
+        profileImg.layer.cornerRadius = 75
+        profileImg.clipsToBounds = true
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 0 {
-            let FAQVC = self.storyboard?.instantiateViewControllerWithIdentifier("FAQViewControllerIndentifier") as? FAQViewController
+            let FAQVC = self.storyboard?.instantiateViewController(withIdentifier: "FAQViewControllerIndentifier") as? FAQViewController
             self.navigationController?.pushViewController(FAQVC!, animated: true)
         }
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("aboutAuthorCell", forIndexPath: indexPath)
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "aboutAuthorCell", for: indexPath)
         return cell
     }
     
-    @IBAction func goAnswerByLabel(sender: AnyObject) {
-        let AnswerVC = self.storyboard?.instantiateViewControllerWithIdentifier("AnswerViewControllerIndentifier") as? AnswerViewController
+    @IBAction func goAnswerByLabel(_ sender: AnyObject) {
+        let AnswerVC = self.storyboard?.instantiateViewController(withIdentifier: "AnswerViewControllerIndentifier") as? AnswerViewController
         self.navigationController?.pushViewController(AnswerVC!, animated: true)
     }
-    @IBAction func goAnswer(sender: AnyObject) {
-        let AnswerVC = self.storyboard?.instantiateViewControllerWithIdentifier("AnswerViewControllerIndentifier") as? AnswerViewController
+    @IBAction func goAnswer(_ sender: AnyObject) {
+        let AnswerVC = self.storyboard?.instantiateViewController(withIdentifier: "AnswerViewControllerIndentifier") as? AnswerViewController
         self.navigationController?.pushViewController(AnswerVC!, animated: true)
     }
 

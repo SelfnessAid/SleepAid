@@ -16,36 +16,35 @@ class FAQViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.FAQTable.estimatedRowHeight = 80
+//        self.FAQTable.estimatedRowHeight = 80
         self.FAQTable.rowHeight = UITableViewAutomaticDimension
         self.FAQTable.setNeedsLayout()
         self.FAQTable.layoutIfNeeded()
-        let backgroundImage = UIImage(named: "background.png")
-        self.view.backgroundColor = UIColor(patternImage: backgroundImage!)
-        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+
+        self.navigationController?.navigationBar.tintColor = UIColor.white
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         
         self.FAQTable.reloadData()
         
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("FAQCell", forIndexPath: indexPath)
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "FAQCell", for: indexPath)
         cell.textLabel?.numberOfLines = 0
-        cell.textLabel?.font = UIFont.systemFontOfSize(13.0)
+        cell.textLabel?.font = UIFont.systemFont(ofSize: 15.0)
         cell.textLabel?.text = items[indexPath.row]
-        cell.textLabel?.textColor = UIColor.whiteColor()
+        cell.textLabel?.textColor = UIColor.init(red: 131.0/255.0, green: 133/255.0, blue: 148/255, alpha: 1.0)
         return cell
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 2
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let AnswerVC = self.storyboard?.instantiateViewControllerWithIdentifier("AnswerViewControllerIndentifier") as? AnswerViewController
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let AnswerVC = self.storyboard?.instantiateViewController(withIdentifier: "AnswerViewControllerIndentifier") as? AnswerViewController
         self.navigationController?.pushViewController(AnswerVC!, animated: true)
     }
 }

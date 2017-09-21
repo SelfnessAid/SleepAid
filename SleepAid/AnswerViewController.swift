@@ -17,17 +17,16 @@ class AnswerViewController: UIViewController {
         super.viewDidLoad()
         self.yesBtn.layer.cornerRadius = 5.0
         self.yesBtn.layer.borderWidth = 2.0
-        self.yesBtn.layer.borderColor = UIColor(hue: 0.067, saturation: 0.97, brightness: 0.79, alpha: 1.0).CGColor
+        self.yesBtn.layer.borderColor = UIColor(hue: 0.067, saturation: 0.97, brightness: 0.79, alpha: 1.0).cgColor
         
         self.noBtn.layer.cornerRadius = 5.0
         self.noBtn.layer.borderWidth = 2.0
-        self.noBtn.layer.borderColor = UIColor(hue: 0.067, saturation: 0.97, brightness: 0.79, alpha: 1.0).CGColor
-        let backgroundImage = UIImage(named: "background.png")
-        self.view.backgroundColor = UIColor(patternImage: backgroundImage!)
-        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+        self.noBtn.layer.borderColor = UIColor(hue: 0.067, saturation: 0.97, brightness: 0.79, alpha: 1.0).cgColor
+
+        self.navigationController?.navigationBar.tintColor = UIColor.white
     }
     
-    @IBAction func BtnClicked(sender: AnyObject) {
+    @IBAction func BtnClicked(_ sender: AnyObject) {
         if sender as! NSObject == self.yesBtn {
             
         } else {

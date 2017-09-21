@@ -10,13 +10,13 @@ import Foundation
 import UIKit
 
 class Alarm {
-    private(set) var UUID: String
-    private(set) var title: String
-    private(set) var time: String
-    private(set) var repeatDays: String
-    private(set) var isAM: String
-    private(set) var isActive: Bool
-    private(set) var fireDate:NSDate
+    fileprivate(set) var UUID: String
+    fileprivate(set) var title: String
+    fileprivate(set) var time: String
+    fileprivate(set) var repeatDays: String
+    fileprivate(set) var isAM: String
+    fileprivate(set) var isActive: Bool
+    fileprivate(set) var fireDate:Date
     
     enum Transportation: String {
         case Automobile = "Automobile"
@@ -26,16 +26,16 @@ class Alarm {
     /* CONSTRUCTORS */
     
     init () {
-        self.UUID = NSUUID().UUIDString
+        self.UUID = Foundation.UUID().uuidString
         self.isActive = true
         self.time = ""
         self.title = "Wake up"
         self.repeatDays = ""
         self.isAM = "AM"
-        self.fireDate = NSDate()
+        self.fireDate = Date()
     }
     
-    init (UUID: String = NSUUID().UUIDString,date: NSDate, time: String, title: String, repeatDays: String, isActive: Bool) {
+    init (UUID: String = Foundation.UUID().uuidString,date: Date, time: String, title: String, repeatDays: String, isActive: Bool) {
 //        let dateFormatter: NSDateFormatter = NSDateFormatter()
 //        dateFormatter.locale = NSLocale.currentLocale()
 //        dateFormatter.dateFormat = "HH:mm:ss";
@@ -77,23 +77,23 @@ class Alarm {
 
     /* ACCESS CONTROL METHODS */
     
-    func setUUID (newID: String) {
+    func setUUID (_ newID: String) {
         self.UUID = newID
     }
     
-    func setTime (time: String) {
+    func setTime (_ time: String) {
         self.time = time
     }
     
-    func setTitle(title: String) {
+    func setTitle(_ title: String) {
         self.title = title
     }
     
-    func setRepeatDays(repeatdays: String) {
+    func setRepeatDays(_ repeatdays: String) {
         self.repeatDays = repeatdays
     }
     
-    func setIsAM(isAM: String) {
+    func setIsAM(_ isAM: String) {
         self.isAM = isAM
     }
     
@@ -112,17 +112,17 @@ class Alarm {
         return dict
     }
     
-    func fromDictionary (dict: NSDictionary) {
-        self.UUID = dict.valueForKey("UUID") as! String
-        self.isActive = dict.valueForKey("isActive") as! Bool
-        self.time = dict.valueForKey("time") as! String
-        self.title = dict.valueForKey("title") as! String
-        self.repeatDays = dict.valueForKey("repeatDays") as! String
-        self.isAM = dict.valueForKey("isAM") as! String
-        self.fireDate = dict.valueForKey("fireDate") as! NSDate
+    func fromDictionary (_ dict: NSDictionary) {
+        self.UUID = dict.value(forKey: "UUID") as! String
+        self.isActive = dict.value(forKey: "isActive") as! Bool
+        self.time = dict.value(forKey: "time") as! String
+        self.title = dict.value(forKey: "title") as! String
+        self.repeatDays = dict.value(forKey: "repeatDays") as! String
+        self.isAM = dict.value(forKey: "isAM") as! String
+        self.fireDate = dict.value(forKey: "fireDate") as! Date
     }
     
     var isOverdue: Bool {
-        return (NSDate().compare(self.fireDate) == NSComparisonResult.OrderedDescending) // deadline is earlier than current date
+        return (Date().compare(self.fireDate) == ComparisonResult.orderedDescending) // deadline is earlier than current date
     }
 }

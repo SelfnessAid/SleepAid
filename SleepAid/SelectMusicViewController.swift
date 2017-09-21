@@ -20,11 +20,6 @@ class SelectMusicViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let backgroundImage = UIImage(named: "background.png")
-        let imageView = UIImageView(image: backgroundImage)
-        imageView.contentMode = .ScaleAspectFit
-        self.tableView.backgroundView = imageView
-        
         selectedRow = -1
         beforeSelectedRow = -1
     }
@@ -34,7 +29,7 @@ class SelectMusicViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
     
@@ -49,55 +44,55 @@ class SelectMusicViewController: UITableViewController {
      }
      */
     
-    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return self.section[section]
     }
     
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return self.section.count
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.items[section].count
     }
     
-    override func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
-        view.tintColor =  UIColor(red: 0.09, green: 0.243, blue: 0.47, alpha: 1.0)
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        view.tintColor =  UIColor.init(red: 131.0/255.0, green: 133/255.0, blue: 148/255, alpha: 1.0)
         let headerView: UITableViewHeaderFooterView = view as! UITableViewHeaderFooterView
-        headerView.contentView.backgroundColor = UIColor.clearColor()
+        headerView.contentView.backgroundColor = UIColor.clear
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         
         //variable type is inferred
-        let cell = tableView.dequeueReusableCellWithIdentifier("tableCell", forIndexPath: indexPath) as! SelectMusicTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "tableCell", for: indexPath) as! SelectMusicTableViewCell
         if indexPath.section == 0 {
             if beforeSelectedRow != selectedRow {
                 if selectedRow == indexPath.row {
-                    cell.checkboxImg.hidden = false
+                    cell.checkboxImg.isHidden = false
                 } else {
-                    cell.checkboxImg.hidden = true
+                    cell.checkboxImg.isHidden = true
                 }
             }
         } else {
-            cell.checkboxImg.hidden = true
+            cell.checkboxImg.isHidden = true
         }
-        cell.musicTitle.textColor = UIColor.whiteColor()
+        cell.musicTitle.textColor = UIColor.white
         cell.musicTitle.text = self.items[indexPath.section][indexPath.row]
         
         return cell
         
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section == 0 {
             Common.sharedInstance.setCurMusicIndex(indexPath.row)
             beforeSelectedRow = selectedRow
             selectedRow = indexPath.row
             self.tableView.reloadData()
             
-            let PlayMusicVC = self.storyboard?.instantiateViewControllerWithIdentifier("PlayMusicViewControllerIdentifier") as? PlayMusicViewController
+            let PlayMusicVC = self.storyboard?.instantiateViewController(withIdentifier: "PlayMusicViewControllerIdentifier") as? PlayMusicViewController
             self.navigationController?.pushViewController(PlayMusicVC!, animated: true)
         } else if indexPath.section == 1 {
             
@@ -105,7 +100,7 @@ class SelectMusicViewController: UITableViewController {
             
         }
     }
-    @IBAction func backBtnClick(sender: AnyObject) {
-        self.navigationController?.popViewControllerAnimated(true)
+    @IBAction func backBtnClick(_ sender: AnyObject) {
+        _ = self.navigationController?.popViewController(animated: true)
     }
 }

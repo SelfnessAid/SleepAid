@@ -14,11 +14,6 @@ class SettingsViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let backgroundImage = UIImage(named: "background.png")
-        let imageView = UIImageView(image: backgroundImage)
-        imageView.contentMode = .ScaleAspectFit
-        self.tableView.backgroundView = imageView
     }
     
     override func didReceiveMemoryWarning() {
@@ -26,7 +21,7 @@ class SettingsViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
     
@@ -41,56 +36,56 @@ class SettingsViewController: UITableViewController {
      }
      */
     
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return 3
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.items[section].count
     }
     
-    override func tableView(tableView: UITableView, estimatedHeightForHeaderInSection section: Int) -> CGFloat {
+    override func tableView(_ tableView: UITableView, estimatedHeightForHeaderInSection section: Int) -> CGFloat {
         return 30.0
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         
         //variable type is inferred
-        var cell = tableView.dequeueReusableCellWithIdentifier("settingsCell", forIndexPath: indexPath) as? UITableViewCell
+        var cell = tableView.dequeueReusableCell(withIdentifier: "settingsCell", for: indexPath) as? UITableViewCell
         
         if (cell == nil) {
-            cell = UITableViewCell(style: UITableViewCellStyle.Value1, reuseIdentifier: "settingsCell")
+            cell = UITableViewCell(style: UITableViewCellStyle.value1, reuseIdentifier: "settingsCell")
         }
         
-        cell?.textLabel?.textColor = UIColor.whiteColor()
+        cell?.textLabel?.textColor = UIColor.init(red: 131.0/255.0, green: 133/255.0, blue: 148/255, alpha: 1.0)
         cell!.textLabel?.text = self.items[indexPath.section][indexPath.row]
         
         return cell!
         
     }
     
-    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return ""
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section == 0 {
             if indexPath.row == 0 {
-                let AboutAuthorVC = self.storyboard?.instantiateViewControllerWithIdentifier("AboutAuthorViewControllerIndentifier") as? AboutAuthorViewController
+                let AboutAuthorVC = self.storyboard?.instantiateViewController(withIdentifier: "AboutAuthorViewControllerIndentifier") as? AboutAuthorViewController
                 self.navigationController?.pushViewController(AboutAuthorVC!, animated: true)
             }
         } else if indexPath.section == 2 {
             if indexPath.row == 0 {
-                let FAQVC = self.storyboard?.instantiateViewControllerWithIdentifier("FAQViewControllerIndentifier") as? FAQViewController
+                let FAQVC = self.storyboard?.instantiateViewController(withIdentifier: "FAQViewControllerIndentifier") as? FAQViewController
                 self.navigationController?.pushViewController(FAQVC!, animated: true)
             }
         }
     }
     
-    override func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
-        view.tintColor =  UIColor(red: 0.09, green: 0.243, blue: 0.47, alpha: 1.0)
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        view.tintColor =  UIColor.init(red: 131.0/255.0, green: 133/255.0, blue: 148/255, alpha: 1.0)
         let headerView: UITableViewHeaderFooterView = view as! UITableViewHeaderFooterView
-        headerView.backgroundColor = UIColor.clearColor()
+        headerView.backgroundColor = UIColor.clear
     }
 }

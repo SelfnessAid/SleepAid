@@ -33,7 +33,7 @@ class Common {
         return self.curAlarmTitle
     }
     
-    func setCurAlarmTitle(title: String) {
+    func setCurAlarmTitle(_ title: String) {
         self.curAlarmTitle = title
     }
     
@@ -41,7 +41,7 @@ class Common {
         return self.curRepeatDays
     }
     
-    func setCurRepeatDays(repeatDays: String) {
+    func setCurRepeatDays(_ repeatDays: String) {
         self.curRepeatDays = repeatDays
     }
     
@@ -49,7 +49,7 @@ class Common {
         return self.curAlarmTime
     }
     
-    func setCurAlarmTime(time: String) {
+    func setCurAlarmTime(_ time: String) {
         self.curAlarmTime = time
     }
     
@@ -57,7 +57,7 @@ class Common {
         return self.curIsAM
     }
     
-    func setIsAM(isAM: String) {
+    func setIsAM(_ isAM: String) {
         self.curIsAM = isAM
     }
     
@@ -65,11 +65,11 @@ class Common {
         return self.curMusicIndex
     }
     
-    func setCurMusicIndex( index: Int ) {
+    func setCurMusicIndex( _ index: Int ) {
         self.curMusicIndex = index
     }
     
-    func getMusicNameByIndex( index: Int ) -> String {
+    func getMusicNameByIndex( _ index: Int ) -> String {
         return self.localMusics[index]
     }
 }

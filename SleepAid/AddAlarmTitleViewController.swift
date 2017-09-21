@@ -14,22 +14,20 @@ class AddAlarmTitleViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let backgroundImage = UIImage(named: "background.png")
-        self.view.backgroundColor = UIColor(patternImage: backgroundImage!)
     }
     
     // Dismiss the keyboard when the user taps the "Return" key or its equivalent
     // while editing a text field.
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         Common.sharedInstance.setCurAlarmTitle(textField.text!)
 
-        self.navigationController?.popViewControllerAnimated(true);
+        _ = self.navigationController?.popViewController(animated: true);
         
         return true;
     }
     
-    @IBAction func backBtnClick(sender: AnyObject) {
-        self.navigationController?.popViewControllerAnimated(true)
+    @IBAction func backBtnClick(_ sender: AnyObject) {
+        _ = self.navigationController?.popViewController(animated: true)
     }
 }

@@ -8,6 +8,30 @@
 
 import UIKit
 import Foundation
+// FIXME: comparison operators with optionals were removed from the Swift Standard Libary.
+// Consider refactoring the code to use the non-optional operators.
+fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l < r
+  case (nil, _?):
+    return true
+  default:
+    return false
+  }
+}
+
+// FIXME: comparison operators with optionals were removed from the Swift Standard Libary.
+// Consider refactoring the code to use the non-optional operators.
+fileprivate func > <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l > r
+  default:
+    return rhs < lhs
+  }
+}
+
 
 class AddAlarmViewController: UITableViewController {
     
@@ -24,7 +48,7 @@ class AddAlarmViewController: UITableViewController {
     @IBOutlet weak var doneBtn: UIBarButtonItem!
     
     @IBOutlet weak var borderLabel: UILabel!
-    var selectDays = [NSInteger](count: 7, repeatedValue: 0)
+    var selectDays = [NSInteger](repeating: 0, count: 7)
     
     override func viewDidLoad() {
         
@@ -62,133 +86,129 @@ class AddAlarmViewController: UITableViewController {
         SatLabel.addGestureRecognizer(Sattap)
         SunLabel.addGestureRecognizer(Suntap)
         
-        MonLabel.userInteractionEnabled = true
-        TueLabel.userInteractionEnabled = true
-        WedLabel.userInteractionEnabled = true
-        ThuLabel.userInteractionEnabled = true
-        FriLabel.userInteractionEnabled = true
-        SatLabel.userInteractionEnabled = true
-        SunLabel.userInteractionEnabled = true
+        MonLabel.isUserInteractionEnabled = true
+        TueLabel.isUserInteractionEnabled = true
+        WedLabel.isUserInteractionEnabled = true
+        ThuLabel.isUserInteractionEnabled = true
+        FriLabel.isUserInteractionEnabled = true
+        SatLabel.isUserInteractionEnabled = true
+        SunLabel.isUserInteractionEnabled = true
         
-        MonLabel.textColor = UIColor.blueColor()
-        TueLabel.textColor = UIColor.blueColor()
-        WedLabel.textColor = UIColor.blueColor()
-        ThuLabel.textColor = UIColor.blueColor()
-        FriLabel.textColor = UIColor.blueColor()
-        SatLabel.textColor = UIColor.blueColor()
-        SunLabel.textColor = UIColor.blueColor()
+        MonLabel.textColor = UIColor.init(red: 131.0/255.0, green: 133/255.0, blue: 148/255, alpha: 1.0)
+        TueLabel.textColor = UIColor.init(red: 131.0/255.0, green: 133/255.0, blue: 148/255, alpha: 1.0)
+        WedLabel.textColor = UIColor.init(red: 131.0/255.0, green: 133/255.0, blue: 148/255, alpha: 1.0)
+        ThuLabel.textColor = UIColor.init(red: 131.0/255.0, green: 133/255.0, blue: 148/255, alpha: 1.0)
+        FriLabel.textColor = UIColor.init(red: 131.0/255.0, green: 133/255.0, blue: 148/255, alpha: 1.0)
+        SatLabel.textColor = UIColor.init(red: 131.0/255.0, green: 133/255.0, blue: 148/255, alpha: 1.0)
+        SunLabel.textColor = UIColor.init(red: 131.0/255.0, green: 133/255.0, blue: 148/255, alpha: 1.0)
         
-        self.doneBtn.enabled = false
+        self.doneBtn.isEnabled = false
         
-        self.dataPicker.datePickerMode = UIDatePickerMode.Time
-        self.dataPicker.timeZone = NSTimeZone.localTimeZone()
-        self.dataPicker.locale = NSLocale.currentLocale()
-        self.dataPicker.calendar = NSCalendar.currentCalendar()
-        self.dataPicker.setValue(UIColor.whiteColor(), forKeyPath: "textColor")
+        self.dataPicker.datePickerMode = UIDatePickerMode.time
+        self.dataPicker.timeZone = TimeZone.autoupdatingCurrent
+        self.dataPicker.locale = Locale.current
+        self.dataPicker.calendar = Calendar.current
+        self.dataPicker.setValue(UIColor.white, forKeyPath: "textColor")
         
-        let backgroundImage = UIImage(named: "background.png")
-        let imageView = UIImageView(image: backgroundImage)
-        imageView.contentMode = .ScaleAspectFit
-        self.tableView.backgroundView = imageView
         
         self.borderLabel.layer.cornerRadius = 5.0
-        self.borderLabel.layer.borderColor = UIColor.init(red: 252.0/255.0, green: 207.0/255.0, blue: 87.0/255.0, alpha: 1.0).CGColor
+        self.borderLabel.layer.borderColor = UIColor.init(red: 252.0/255.0, green: 207.0/255.0, blue: 87.0/255.0, alpha: 1.0).cgColor
         self.borderLabel.layer.borderWidth = 2.0
 
     }
     
-    func MonlabelAction(sender:UITapGestureRecognizer) {
-        var frame : CGRect = CGRectMake(MonLabel.frame.origin.x, MonLabel.frame.origin.y, MonLabel.frame.size.width, MonLabel.frame.size.height)
+    func MonlabelAction(_ sender:UITapGestureRecognizer) {
+        var frame : CGRect = CGRect(x: MonLabel.frame.origin.x, y: MonLabel.frame.origin.y, width: MonLabel.frame.size.width, height: MonLabel.frame.size.height)
         if (selectDays[0] == 0) {
             frame.origin.y = frame.origin.y - 10          //pass the cordinate which you want
-            MonLabel.textColor = UIColor.whiteColor()
+            MonLabel.textColor = UIColor.white
         } else {
             frame.origin.y = frame.origin.y + 10          //pass the cordinate which you want
-            MonLabel.textColor = UIColor.blueColor()
+            MonLabel.textColor = UIColor.init(red: 131.0/255.0, green: 133/255.0, blue: 148/255, alpha: 1.0)
         }
         selectDays[0] = 1 - selectDays[0]
         checkDoneButtonState()
         MonLabel.frame = frame
     }
     
-    func TuelabelAction(sender:UITapGestureRecognizer) {
-        var frame : CGRect = CGRectMake(TueLabel.frame.origin.x, TueLabel.frame.origin.y, TueLabel.frame.size.width, TueLabel.frame.size.height)
+    func TuelabelAction(_ sender:UITapGestureRecognizer) {
+        var frame : CGRect = CGRect(x: TueLabel.frame.origin.x, y: TueLabel.frame.origin.y, width: TueLabel.frame.size.width, height: TueLabel.frame.size.height)
         if (selectDays[1] == 0) {
             frame.origin.y = frame.origin.y - 10          //pass the cordinate which you want
-            TueLabel.textColor = UIColor.whiteColor()
+            TueLabel.textColor = UIColor.white
         } else {
             frame.origin.y = frame.origin.y + 10          //pass the cordinate which you want
-            TueLabel.textColor = UIColor.blueColor()
+            TueLabel.textColor = UIColor.init(red: 131.0/255.0, green: 133/255.0, blue: 148/255, alpha: 1.0)
         }
         selectDays[1] = 1 - selectDays[1]
         checkDoneButtonState()
         TueLabel.frame = frame
     }
     
-    func WedlabelAction(sender:UITapGestureRecognizer) {
-        var frame : CGRect = CGRectMake(WedLabel.frame.origin.x, WedLabel.frame.origin.y, WedLabel.frame.size.width, WedLabel.frame.size.height)
+    func WedlabelAction(_ sender:UITapGestureRecognizer) {
+        var frame : CGRect = CGRect(x: WedLabel.frame.origin.x, y: WedLabel.frame.origin.y, width: WedLabel.frame.size.width, height: WedLabel.frame.size.height)
         if (selectDays[2] == 0) {
             frame.origin.y = frame.origin.y - 10          //pass the cordinate which you want
-            WedLabel.textColor = UIColor.whiteColor()
+            WedLabel.textColor = UIColor.white
         } else {
             frame.origin.y = frame.origin.y + 10          //pass the cordinate which you want
-            WedLabel.textColor = UIColor.blueColor()
+            WedLabel.textColor = UIColor.init(red: 131.0/255.0, green: 133/255.0, blue: 148/255, alpha: 1.0)
         }
         selectDays[2] = 1 - selectDays[2]
         checkDoneButtonState()
         WedLabel.frame = frame
     }
     
-    func ThulabelAction(sender:UITapGestureRecognizer) {
-        var frame : CGRect = CGRectMake(ThuLabel.frame.origin.x, ThuLabel.frame.origin.y, ThuLabel.frame.size.width, ThuLabel.frame.size.height)
+    func ThulabelAction(_ sender:UITapGestureRecognizer) {
+        var frame : CGRect = CGRect(x: ThuLabel.frame.origin.x, y: ThuLabel.frame.origin.y, width: ThuLabel.frame.size.width, height: ThuLabel.frame.size.height)
         if (selectDays[3] == 0) {
             frame.origin.y = frame.origin.y - 10          //pass the cordinate which you want
-            ThuLabel.textColor = UIColor.whiteColor()
+            ThuLabel.textColor = UIColor.white
         } else {
             frame.origin.y = frame.origin.y + 10          //pass the cordinate which you want
-            ThuLabel.textColor = UIColor.blueColor()
+            ThuLabel.textColor = UIColor.init(red: 131.0/255.0, green: 133/255.0, blue: 148/255, alpha: 1.0)
         }
         selectDays[3] = 1 - selectDays[3]
         checkDoneButtonState()
         ThuLabel.frame = frame
     }
     
-    func FrilabelAction(sender:UITapGestureRecognizer) {
-        var frame : CGRect = CGRectMake(FriLabel.frame.origin.x, FriLabel.frame.origin.y, FriLabel.frame.size.width, FriLabel.frame.size.height)
+    func FrilabelAction(_ sender:UITapGestureRecognizer) {
+        var frame : CGRect = CGRect(x: FriLabel.frame.origin.x, y: FriLabel.frame.origin.y, width: FriLabel.frame.size.width, height: FriLabel.frame.size.height)
         if (selectDays[4] == 0) {
             frame.origin.y = frame.origin.y - 10          //pass the cordinate which you want
-            FriLabel.textColor = UIColor.whiteColor()
+            FriLabel.textColor = UIColor.white
         } else {
             frame.origin.y = frame.origin.y + 10          //pass the cordinate which you want
-            FriLabel.textColor = UIColor.blueColor()
+            FriLabel.textColor = UIColor.init(red: 131.0/255.0, green: 133/255.0, blue: 148/255, alpha: 1.0)
         }
         selectDays[4] = 1 - selectDays[4]
         checkDoneButtonState()
         FriLabel.frame = frame
     }
     
-    func SatlabelAction(sender:UITapGestureRecognizer) {
-        var frame : CGRect = CGRectMake(SatLabel.frame.origin.x, SatLabel.frame.origin.y, SatLabel.frame.size.width, SatLabel.frame.size.height)
+    func SatlabelAction(_ sender:UITapGestureRecognizer) {
+        var frame : CGRect = CGRect(x: SatLabel.frame.origin.x, y: SatLabel.frame.origin.y, width: SatLabel.frame.size.width, height: SatLabel.frame.size.height)
         if (selectDays[5] == 0) {
             frame.origin.y = frame.origin.y - 10          //pass the cordinate which you want
-            SatLabel.textColor = UIColor.whiteColor()
+            SatLabel.textColor = UIColor.white
         } else {
             frame.origin.y = frame.origin.y + 10          //pass the cordinate which you want
-            SatLabel.textColor = UIColor.blueColor()
+            SatLabel.textColor = UIColor.init(red: 131.0/255.0, green: 133/255.0, blue: 148/255, alpha: 1.0)
         }
         selectDays[5] = 1 - selectDays[5]
         checkDoneButtonState()
         SatLabel.frame = frame
     }
     
-    func SunlabelAction(sender:UITapGestureRecognizer) {
-        var frame : CGRect = CGRectMake(SunLabel.frame.origin.x, SunLabel.frame.origin.y, SunLabel.frame.size.width, SunLabel.frame.size.height)
+    func SunlabelAction(_ sender:UITapGestureRecognizer) {
+        var frame : CGRect = CGRect(x: SunLabel.frame.origin.x, y: SunLabel.frame.origin.y, width: SunLabel.frame.size.width, height: SunLabel.frame.size.height)
         if (selectDays[6] == 0) {
             frame.origin.y = frame.origin.y - 10          //pass the cordinate which you want
-            SunLabel.textColor = UIColor.whiteColor()
+            SunLabel.textColor = UIColor.white
         } else {
             frame.origin.y = frame.origin.y + 10          //pass the cordinate which you want
-            SunLabel.textColor = UIColor.blueColor()
+            SunLabel.textColor = UIColor.init(red: 131.0/255.0, green: 133/255.0, blue: 148/255, alpha: 1.0)
         }
         selectDays[6] = 1 - selectDays[6]
         checkDoneButtonState()
@@ -197,31 +217,31 @@ class AddAlarmViewController: UITableViewController {
     
     func checkDoneButtonState() {
         if selectDays.contains(1) {
-            self.doneBtn.enabled = true
+            self.doneBtn.isEnabled = true
         } else {
-            self.doneBtn.enabled = false
+            self.doneBtn.isEnabled = false
         }
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         self.alarmTitleLabel.text = Common.sharedInstance.getCurAlarmTitle()
         self.alarmMusicLabel.text = Common.sharedInstance.getMusicNameByIndex(Common.sharedInstance.getCurMusicIndex())
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let index = indexPath.row
         
         switch index {
         case 1:
             break
         case 2:
-            let addAlarmTitleVC = self.storyboard?.instantiateViewControllerWithIdentifier("AddAlarmTitleViewControllerIdentifier") as? AddAlarmTitleViewController
+            let addAlarmTitleVC = self.storyboard?.instantiateViewController(withIdentifier: "AddAlarmTitleViewControllerIdentifier") as? AddAlarmTitleViewController
             self.navigationController?.pushViewController(addAlarmTitleVC!, animated: true)
             break
         case 3:
-            let selectMusicVC = self.storyboard?.instantiateViewControllerWithIdentifier("SelectMusicViewControllerIdentifier") as? SelectMusicViewController
+            let selectMusicVC = self.storyboard?.instantiateViewController(withIdentifier: "SelectMusicViewControllerIdentifier") as? SelectMusicViewController
             self.navigationController?.pushViewController(selectMusicVC!, animated: true)
             break
         default:
@@ -230,10 +250,10 @@ class AddAlarmViewController: UITableViewController {
     }
     
     
-    @IBAction func doneBtnClick(sender: AnyObject) {
+    @IBAction func doneBtnClick(_ sender: AnyObject) {
         
         var repeatDays: String = ""
-        for (index, element) in selectDays.enumerate() {
+        for (index, element) in selectDays.enumerated() {
             if element == 1 {
                 switch index {
                 case 0:
@@ -264,14 +284,14 @@ class AddAlarmViewController: UITableViewController {
         }
         
         if repeatDays.characters.count > 2 {
-            repeatDays = repeatDays.substringWithRange(Range<String.Index>(start: repeatDays.startIndex, end: repeatDays.endIndex.advancedBy(-2)))
+            repeatDays = repeatDays.substring(with: (repeatDays.startIndex ..< repeatDays.characters.index(repeatDays.endIndex, offsetBy: -2)))
             Common.sharedInstance.setCurRepeatDays(repeatDays)
         }
 
-        let dataFormatter = NSDateFormatter()
+        let dataFormatter = DateFormatter()
         dataFormatter.dateFormat = "HH:mm"
-        var Time: String = dataFormatter.stringFromDate(dataPicker.date)
-        var tmpArr = Time.componentsSeparatedByString(":")
+        var Time: String = dataFormatter.string(from: dataPicker.date)
+        var tmpArr = Time.components(separatedBy: ":")
         
         if Int(tmpArr[0]) > 12 {
             Time = String(Int(tmpArr[0])! % 12)
@@ -281,7 +301,7 @@ class AddAlarmViewController: UITableViewController {
             Common.sharedInstance.setIsAM("AM")
         }
         
-        if Int(tmpArr[0])! % 12 < 10 && !tmpArr[0].containsString("0") {
+        if Int(tmpArr[0])! % 12 < 10 && !tmpArr[0].contains("0") {
             Time = "0" + Time
         }
         
@@ -290,14 +310,14 @@ class AddAlarmViewController: UITableViewController {
         
         Common.sharedInstance.setCurAlarmTime(Time)
         
-        let alarm = Alarm(UUID: NSUUID().UUIDString,date: dataPicker.date, time: Common.sharedInstance.getCurAlarmTime(), title: Common.sharedInstance.getCurAlarmTitle(), repeatDays: Common.sharedInstance.getCurRepeatDays(), isActive: true)
+        let alarm = Alarm(UUID: UUID().uuidString,date: dataPicker.date, time: Common.sharedInstance.getCurAlarmTime(), title: Common.sharedInstance.getCurAlarmTitle(), repeatDays: Common.sharedInstance.getCurRepeatDays(), isActive: true)
         AlarmList.sharedInstance.addAlarm(alarm) // schedule a local notification to persist this item
         
-        self.navigationController?.popViewControllerAnimated(true);
+        _ = self.navigationController?.popViewController(animated: true);
     }
     
-    @IBAction func backBtnClick(sender: AnyObject) {
-        self.navigationController?.popViewControllerAnimated(true)
+    @IBAction func backBtnClick(_ sender: AnyObject) {
+        _ = self.navigationController?.popViewController(animated: true)
     }
 }
 
