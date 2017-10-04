@@ -114,6 +114,8 @@ class AddAlarmViewController: UITableViewController {
         self.borderLabel.layer.cornerRadius = 5.0
         self.borderLabel.layer.borderColor = UIColor.init(red: 252.0/255.0, green: 207.0/255.0, blue: 87.0/255.0, alpha: 1.0).cgColor
         self.borderLabel.layer.borderWidth = 2.0
+        
+        self.navigationController?.navigationBar.tintColor = UIColor.white
 
     }
     

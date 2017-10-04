@@ -10,7 +10,7 @@ import UIKit
 
 class SettingsViewController: UITableViewController {
     
-    let items = [["About Barry Zecca", "Subscribe to newsletter"], ["Tell me about your think", "Share on Facebook", "Share on Twitter"], ["FAQ", "Terms of use"]]
+    let items = [["About Barry Zecca"], ["Share on Facebook", "Share on Twitter"], ["Terms of use"]]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,6 +60,9 @@ class SettingsViewController: UITableViewController {
         
         cell?.textLabel?.textColor = UIColor.init(red: 131.0/255.0, green: 133/255.0, blue: 148/255, alpha: 1.0)
         cell!.textLabel?.text = self.items[indexPath.section][indexPath.row]
+        if (indexPath.section == 1) {
+            cell?.accessoryType = .none
+        }
         
         return cell!
         
@@ -77,8 +80,8 @@ class SettingsViewController: UITableViewController {
             }
         } else if indexPath.section == 2 {
             if indexPath.row == 0 {
-                let FAQVC = self.storyboard?.instantiateViewController(withIdentifier: "FAQViewControllerIndentifier") as? FAQViewController
-                self.navigationController?.pushViewController(FAQVC!, animated: true)
+//                let FAQVC = self.storyboard?.instantiateViewController(withIdentifier: "FAQViewControllerIndentifier") as? FAQViewController
+//                self.navigationController?.pushViewController(FAQVC!, animated: true)
             }
         }
     }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AboutAuthorViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class AboutAuthorViewController: UIViewController{
     
     @IBOutlet weak var profileImg: UIImageView!
     override func viewDidLoad() {
@@ -21,22 +21,6 @@ class AboutAuthorViewController: UIViewController, UITableViewDelegate, UITableV
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.row == 0 {
-            let FAQVC = self.storyboard?.instantiateViewController(withIdentifier: "FAQViewControllerIndentifier") as? FAQViewController
-            self.navigationController?.pushViewController(FAQVC!, animated: true)
-        }
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "aboutAuthorCell", for: indexPath)
-        return cell
     }
     
     @IBAction func goAnswerByLabel(_ sender: AnyObject) {

@@ -120,4 +120,8 @@ class AlarmViewController: UITableViewController {
         return [deleteAction]
     }
     
+    @IBAction func addNewAlarmBtn_Click(_ sender: Any) {
+        let AddAlarmVC = self.storyboard?.instantiateViewController(withIdentifier: "AddAlarmViewControllerIdentifier") as? AddAlarmViewController
+        self.navigationController?.pushViewController(AddAlarmVC!, animated: true)
+    }
 }

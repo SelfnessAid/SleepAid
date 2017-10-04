@@ -279,7 +279,13 @@
 				TargetAttributes = {
 					4BE22A151D026F2E00A710F8 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 5J47YAL9DK;
 						LastSwiftMigration = 0820;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					4BE22A2B1D026F2E00A710F8 = {
 						CreatedOnToolsVersion = 7.3;
@@ -439,8 +445,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Pat Colucci (96ZWSS2R65)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Pat Colucci (96ZWSS2R65)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Denzil Dsa (5J47YAL9DK)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Denzil Dsa (5J47YAL9DK)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -459,10 +465,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "d4f46127-2955-4762-be6c-e8acd560cbc3";
+				PROVISIONING_PROFILE = "16681ab5-689f-4e89-93ea-d31c79f1f71e";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -486,7 +492,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Pat Colucci (96ZWSS2R65)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Denzil Dsa (5J47YAL9DK)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Pat Colucci (96ZWSS2R65)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -500,9 +506,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "d4f46127-2955-4762-be6c-e8acd560cbc3";
+				PROVISIONING_PROFILE = "16681ab5-689f-4e89-93ea-d31c79f1f71e";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -512,12 +518,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Pat Colucci (96ZWSS2R65)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Denzil Dsa (5J47YAL9DK)";
+				DEVELOPMENT_TEAM = 5J47YAL9DK;
 				INFOPLIST_FILE = SleepAid/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = enriquealonso.SleepAid;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AudioBittsInc.SleepDeeply;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "d4f46127-2955-4762-be6c-e8acd560cbc3";
+				PROVISIONING_PROFILE = "16681ab5-689f-4e89-93ea-d31c79f1f71e";
+				PROVISIONING_PROFILE_SPECIFIER = SleepDeeply_appstore_provisioning;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -526,12 +535,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Pat Colucci (96ZWSS2R65)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Denzil Dsa (5J47YAL9DK)";
+				DEVELOPMENT_TEAM = 5J47YAL9DK;
 				INFOPLIST_FILE = SleepAid/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = enriquealonso.SleepAid;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AudioBittsInc.SleepDeeply;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "d4f46127-2955-4762-be6c-e8acd560cbc3";
+				PROVISIONING_PROFILE = "16681ab5-689f-4e89-93ea-d31c79f1f71e";
+				PROVISIONING_PROFILE_SPECIFIER = SleepDeeply_appstore_provisioning;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
