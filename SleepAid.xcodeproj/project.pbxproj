@@ -34,6 +34,9 @@
 		4BE22A311D026F2E00A710F8 /* SleepAidTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE22A301D026F2E00A710F8 /* SleepAidTests.swift */; };
 		4BE22A3C1D026F2E00A710F8 /* SleepAidUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE22A3B1D026F2E00A710F8 /* SleepAidUITests.swift */; };
 		4BE46F921D0ACCE9002F94B1 /* NotifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE46F911D0ACCE9002F94B1 /* NotifyViewController.swift */; };
+		4DAFD8ED92A44F9CA37B19E8 /* Pods_SleepAidUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 497B519AE1FFBC5BD52453AC /* Pods_SleepAidUITests.framework */; };
+		71C532BA562439359D9AC6E9 /* Pods_SleepAidTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF22B000371B95BC46F39F54 /* Pods_SleepAidTests.framework */; };
+		DA050D3373E37A51621FB5EF /* Pods_SleepAid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 832EB18AA643A593F6A66431 /* Pods_SleepAid.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +57,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2D635D56B53F65E7CF190F3D /* Pods-SleepAidUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SleepAidUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SleepAidUITests/Pods-SleepAidUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		497B519AE1FFBC5BD52453AC /* Pods_SleepAidUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SleepAidUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B01FDBA1D0B3C3200D89855 /* NotifyViewTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotifyViewTableCell.swift; sourceTree = "<group>"; };
 		4B01FDBC1D0B692000D89855 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		4B01FDC01D0BBD9700D89855 /* AboutAuthorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutAuthorViewController.swift; sourceTree = "<group>"; };
@@ -88,6 +93,13 @@
 		4BE22A3B1D026F2E00A710F8 /* SleepAidUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepAidUITests.swift; sourceTree = "<group>"; };
 		4BE22A3D1D026F2E00A710F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4BE46F911D0ACCE9002F94B1 /* NotifyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotifyViewController.swift; sourceTree = "<group>"; };
+		6563DA6A11E5018529CF50FE /* Pods-SleepAid.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SleepAid.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SleepAid/Pods-SleepAid.debug.xcconfig"; sourceTree = "<group>"; };
+		832EB18AA643A593F6A66431 /* Pods_SleepAid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SleepAid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8345CA3E2340C079601D6ADA /* Pods-SleepAidUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SleepAidUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SleepAidUITests/Pods-SleepAidUITests.release.xcconfig"; sourceTree = "<group>"; };
+		8E33CC9755EB3AF8D3982D89 /* Pods-SleepAid.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SleepAid.release.xcconfig"; path = "Pods/Target Support Files/Pods-SleepAid/Pods-SleepAid.release.xcconfig"; sourceTree = "<group>"; };
+		C92CE89F39C82769AD96474C /* Pods-SleepAidTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SleepAidTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SleepAidTests/Pods-SleepAidTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DF22B000371B95BC46F39F54 /* Pods_SleepAidTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SleepAidTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7E7654C12E528CDA3C3030D /* Pods-SleepAidTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SleepAidTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SleepAidTests/Pods-SleepAidTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA050D3373E37A51621FB5EF /* Pods_SleepAid.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +115,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71C532BA562439359D9AC6E9 /* Pods_SleepAidTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,6 +123,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DAFD8ED92A44F9CA37B19E8 /* Pods_SleepAidUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,6 +180,8 @@
 				4BE22A2F1D026F2E00A710F8 /* SleepAidTests */,
 				4BE22A3A1D026F2E00A710F8 /* SleepAidUITests */,
 				4BE22A171D026F2E00A710F8 /* Products */,
+				E6B7CCBAA70EC73A1A5DED2E /* Pods */,
+				550B4ACF0E087FA17EEADB6C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -211,6 +228,29 @@
 			path = SleepAidUITests;
 			sourceTree = "<group>";
 		};
+		550B4ACF0E087FA17EEADB6C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				832EB18AA643A593F6A66431 /* Pods_SleepAid.framework */,
+				DF22B000371B95BC46F39F54 /* Pods_SleepAidTests.framework */,
+				497B519AE1FFBC5BD52453AC /* Pods_SleepAidUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E6B7CCBAA70EC73A1A5DED2E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6563DA6A11E5018529CF50FE /* Pods-SleepAid.debug.xcconfig */,
+				8E33CC9755EB3AF8D3982D89 /* Pods-SleepAid.release.xcconfig */,
+				C92CE89F39C82769AD96474C /* Pods-SleepAidTests.debug.xcconfig */,
+				F7E7654C12E528CDA3C3030D /* Pods-SleepAidTests.release.xcconfig */,
+				2D635D56B53F65E7CF190F3D /* Pods-SleepAidUITests.debug.xcconfig */,
+				8345CA3E2340C079601D6ADA /* Pods-SleepAidUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -218,9 +258,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4BE22A401D026F2E00A710F8 /* Build configuration list for PBXNativeTarget "SleepAid" */;
 			buildPhases = (
+				966A469810AAA361C6FCB690 /* [CP] Check Pods Manifest.lock */,
 				4BE22A121D026F2E00A710F8 /* Sources */,
 				4BE22A131D026F2E00A710F8 /* Frameworks */,
 				4BE22A141D026F2E00A710F8 /* Resources */,
+				7064DB1FC67D7E9602C0D482 /* [CP] Embed Pods Frameworks */,
+				91B72A6B98DBB2AC4356524C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -235,9 +278,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4BE22A431D026F2E00A710F8 /* Build configuration list for PBXNativeTarget "SleepAidTests" */;
 			buildPhases = (
+				15621B3D13473ADBCB2568EE /* [CP] Check Pods Manifest.lock */,
 				4BE22A281D026F2E00A710F8 /* Sources */,
 				4BE22A291D026F2E00A710F8 /* Frameworks */,
 				4BE22A2A1D026F2E00A710F8 /* Resources */,
+				E7F8F89789B52AC2D2677F5B /* [CP] Embed Pods Frameworks */,
+				D468ECFF2AB81B11D2666584 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -253,9 +299,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4BE22A461D026F2E00A710F8 /* Build configuration list for PBXNativeTarget "SleepAidUITests" */;
 			buildPhases = (
+				768AD7F14B794380A1A79017 /* [CP] Check Pods Manifest.lock */,
 				4BE22A331D026F2E00A710F8 /* Sources */,
 				4BE22A341D026F2E00A710F8 /* Frameworks */,
 				4BE22A351D026F2E00A710F8 /* Resources */,
+				647547A67ADEE9A004E8F178 /* [CP] Embed Pods Frameworks */,
+				FBC792C619D01E466983E697 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -348,6 +397,166 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		15621B3D13473ADBCB2568EE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SleepAidTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		647547A67ADEE9A004E8F178 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SleepAidUITests/Pods-SleepAidUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7064DB1FC67D7E9602C0D482 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SleepAid/Pods-SleepAid-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SleepAid/Pods-SleepAid-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		768AD7F14B794380A1A79017 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SleepAidUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		91B72A6B98DBB2AC4356524C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SleepAid/Pods-SleepAid-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		966A469810AAA361C6FCB690 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SleepAid-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D468ECFF2AB81B11D2666584 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SleepAidTests/Pods-SleepAidTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E7F8F89789B52AC2D2677F5B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SleepAidTests/Pods-SleepAidTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FBC792C619D01E466983E697 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SleepAidUITests/Pods-SleepAidUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4BE22A121D026F2E00A710F8 /* Sources */ = {
@@ -516,40 +725,41 @@
 		};
 		4BE22A411D026F2E00A710F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6563DA6A11E5018529CF50FE /* Pods-SleepAid.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Denzil Dsa (5J47YAL9DK)";
-				DEVELOPMENT_TEAM = 5J47YAL9DK;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Denzil Dsa (7QR55KXJG8)";
 				INFOPLIST_FILE = SleepAid/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.AudioBittsInc.SleepDeeply;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "16681ab5-689f-4e89-93ea-d31c79f1f71e";
-				PROVISIONING_PROFILE_SPECIFIER = SleepDeeply_appstore_provisioning;
+				PROVISIONING_PROFILE = "9c1f418c-d355-4f3e-b251-7c11a5860e60";
+				PROVISIONING_PROFILE_SPECIFIER = sleep_deeply_development_provisioning;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		4BE22A421D026F2E00A710F8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E33CC9755EB3AF8D3982D89 /* Pods-SleepAid.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Denzil Dsa (5J47YAL9DK)";
-				DEVELOPMENT_TEAM = 5J47YAL9DK;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Denzil Dsa (7QR55KXJG8)";
 				INFOPLIST_FILE = SleepAid/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.AudioBittsInc.SleepDeeply;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "16681ab5-689f-4e89-93ea-d31c79f1f71e";
-				PROVISIONING_PROFILE_SPECIFIER = SleepDeeply_appstore_provisioning;
+				PROVISIONING_PROFILE = "9c1f418c-d355-4f3e-b251-7c11a5860e60";
+				PROVISIONING_PROFILE_SPECIFIER = sleep_deeply_development_provisioning;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		4BE22A441D026F2E00A710F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C92CE89F39C82769AD96474C /* Pods-SleepAidTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = SleepAidTests/Info.plist;
@@ -563,6 +773,7 @@
 		};
 		4BE22A451D026F2E00A710F8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F7E7654C12E528CDA3C3030D /* Pods-SleepAidTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = SleepAidTests/Info.plist;
@@ -576,6 +787,7 @@
 		};
 		4BE22A471D026F2E00A710F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D635D56B53F65E7CF190F3D /* Pods-SleepAidUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = SleepAidUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -588,6 +800,7 @@
 		};
 		4BE22A481D026F2E00A710F8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8345CA3E2340C079601D6ADA /* Pods-SleepAidUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = SleepAidUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

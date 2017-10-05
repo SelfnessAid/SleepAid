@@ -861,43 +861,10 @@ CQ
                                 <color key="textColor" red="0.43529412150000002" green="0.4431372583" blue="0.47450980539999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fKa-iS-Khk">
-                                <rect key="frame" x="0.0" y="558" width="375" height="60"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g8c-cW-I3V">
-                                        <rect key="frame" x="330" y="17.5" width="25" height="25"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="25" id="Pbq-Zg-x08"/>
-                                            <constraint firstAttribute="height" constant="25" id="UBj-UG-E9A"/>
-                                        </constraints>
-                                        <state key="normal" image="right_arrow"/>
-                                        <connections>
-                                            <action selector="goAnswer:" destination="eZ2-FX-OZE" eventType="touchUpInside" id="AmO-cB-Cg9"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tme-wd-jnT">
-                                        <rect key="frame" x="20" y="15" width="103" height="30"/>
-                                        <state key="normal" title="Ask a Question">
-                                            <color key="titleColor" red="0.43529412150000002" green="0.4431372583" blue="0.47450980539999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="goAnswerByLabel:" destination="eZ2-FX-OZE" eventType="touchUpInside" id="kcL-bI-cfG"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstItem="tme-wd-jnT" firstAttribute="centerY" secondItem="fKa-iS-Khk" secondAttribute="centerY" id="Cjp-SV-qe4"/>
-                                    <constraint firstAttribute="height" constant="60" id="K7C-MV-ki7"/>
-                                    <constraint firstAttribute="trailing" secondItem="g8c-cW-I3V" secondAttribute="trailing" constant="20" id="UBY-Tv-XJu"/>
-                                    <constraint firstItem="tme-wd-jnT" firstAttribute="leading" secondItem="fKa-iS-Khk" secondAttribute="leading" constant="20" id="s7M-Ny-DKK"/>
-                                    <constraint firstItem="g8c-cW-I3V" firstAttribute="centerY" secondItem="fKa-iS-Khk" secondAttribute="centerY" id="zEU-bx-Jbb"/>
-                                </constraints>
-                            </view>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="TWZ-CZ-1Yq">
-                                <rect key="frame" x="16" y="313.5" width="343" height="229.5"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="TWZ-CZ-1Yq">
+                                <rect key="frame" x="16" y="313.5" width="343" height="284.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <mutableString key="text">Barry is an AAEH-certified hypnotist, with a Masters' degree in PSychology from the well-known New School for Social Research in New York.  His career began in 1973 when he was fortunate to meet and begin working closely with Harry Arons, a man world-famous in the field of hypnocis for more than 50 years.</mutableString>
+                                <string key="text">Barry is an AAEH-certified hypnotist, with a Masters' degree in PSychology from the well-known New School for Social Research in New York.  His career began in 1973 when he was fortunate to meet and begin working closely with Harry Arons, a man world-famous in the field of hypnocis for more than 50 years.</string>
                                 <color key="textColor" red="0.95007227670000005" green="0.97919008780000005" blue="0.9567684836" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -906,16 +873,13 @@ CQ
                         <color key="backgroundColor" red="0.1843137255" green="0.1960784314" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="1xe-yC-uAd" firstAttribute="top" secondItem="eIu-2B-HiO" secondAttribute="bottom" id="Hqd-aQ-yyQ"/>
-                            <constraint firstItem="fKa-iS-Khk" firstAttribute="top" secondItem="TWZ-CZ-1Yq" secondAttribute="bottom" constant="15" id="Jy6-4u-fPB"/>
+                            <constraint firstItem="2OC-Ix-XiR" firstAttribute="top" secondItem="TWZ-CZ-1Yq" secondAttribute="bottom" constant="20" id="N7V-uh-WxU"/>
                             <constraint firstItem="a27-vp-WAe" firstAttribute="centerX" secondItem="45M-ic-tcW" secondAttribute="centerX" id="Pi4-bw-Kma"/>
                             <constraint firstItem="TWZ-CZ-1Yq" firstAttribute="leading" secondItem="45M-ic-tcW" secondAttribute="leadingMargin" id="TyH-1R-JDh"/>
                             <constraint firstItem="a27-vp-WAe" firstAttribute="top" secondItem="gIr-pc-SKg" secondAttribute="bottom" constant="30" id="U5r-O6-xIp"/>
                             <constraint firstItem="TWZ-CZ-1Yq" firstAttribute="top" secondItem="1xe-yC-uAd" secondAttribute="bottom" constant="15" id="V0R-hf-Q5F"/>
                             <constraint firstItem="eIu-2B-HiO" firstAttribute="top" secondItem="a27-vp-WAe" secondAttribute="bottom" constant="15" id="YeJ-ej-H6S"/>
                             <constraint firstItem="1xe-yC-uAd" firstAttribute="centerX" secondItem="45M-ic-tcW" secondAttribute="centerX" id="aY8-99-slc"/>
-                            <constraint firstItem="fKa-iS-Khk" firstAttribute="leading" secondItem="45M-ic-tcW" secondAttribute="leading" id="hOK-VZ-nNj"/>
-                            <constraint firstAttribute="trailing" secondItem="fKa-iS-Khk" secondAttribute="trailing" id="iSj-nI-2Re"/>
-                            <constraint firstItem="2OC-Ix-XiR" firstAttribute="top" secondItem="fKa-iS-Khk" secondAttribute="bottom" id="mZy-9L-QNg"/>
                             <constraint firstItem="eIu-2B-HiO" firstAttribute="centerX" secondItem="45M-ic-tcW" secondAttribute="centerX" id="t5z-pd-ftA"/>
                             <constraint firstItem="TWZ-CZ-1Yq" firstAttribute="trailing" secondItem="45M-ic-tcW" secondAttribute="trailingMargin" id="z9J-oi-gbg"/>
                         </constraints>
@@ -1154,7 +1118,6 @@ Pellentesque as odio is libero pretium ultricies. Sed fringilla arcu lorem, non 
         <image name="before" width="37" height="23"/>
         <image name="checkbox" width="33" height="33"/>
         <image name="play" width="52" height="52"/>
-        <image name="right_arrow" width="25" height="25"/>
         <image name="stop" width="23" height="23"/>
     </resources>
 </document>

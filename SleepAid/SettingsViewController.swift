@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Social
 
 class SettingsViewController: UITableViewController {
     
@@ -77,6 +78,30 @@ class SettingsViewController: UITableViewController {
             if indexPath.row == 0 {
                 let AboutAuthorVC = self.storyboard?.instantiateViewController(withIdentifier: "AboutAuthorViewControllerIndentifier") as? AboutAuthorViewController
                 self.navigationController?.pushViewController(AboutAuthorVC!, animated: true)
+            }
+        } else if indexPath.section == 1 {
+            let appURL = "https://itunes.apple.com/us/app/sleep-deeply-a-relaxation/id1288596499?mt=8"
+            let initText = "Nice app"
+            if indexPath.row == 0 {
+                if SLComposeViewController.isAvailable(forServiceType: SLServiceTypeFacebook) {
+                    let facebookShare = SLComposeViewController(forServiceType: SLServiceTypeFacebook)!
+                    facebookShare.setInitialText(initText)
+                    facebookShare.add(URL(string: appURL))
+                    self.present(facebookShare, animated: true, completion: nil)
+                } else {
+                    let alert = UIAlertController(title: "Notice", message: "You have no facebook application on your device. Please install it and try again.", preferredStyle: .alert)
+                    self.present(alert, animated: true, completion: nil)
+                }
+            } else if indexPath.row == 1 {
+                if SLComposeViewController.isAvailable(forServiceType: SLServiceTypeTwitter) {
+                    let twitterShare = SLComposeViewController(forServiceType: SLServiceTypeTwitter)!
+                    twitterShare.setInitialText(initText)
+                    twitterShare.add(URL(string: appURL))
+                    self.present(twitterShare, animated: true, completion: nil)
+                } else {
+                    let alert = UIAlertController(title: "Notice", message: "You have no twitter application on your device. Please install it and try again.", preferredStyle: .alert)
+                    self.present(alert, animated: true, completion: nil)
+                }
             }
         } else if indexPath.section == 2 {
             if indexPath.row == 0 {
