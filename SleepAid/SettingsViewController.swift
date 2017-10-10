@@ -105,8 +105,8 @@ class SettingsViewController: UITableViewController {
             }
         } else if indexPath.section == 2 {
             if indexPath.row == 0 {
-//                let FAQVC = self.storyboard?.instantiateViewController(withIdentifier: "FAQViewControllerIndentifier") as? FAQViewController
-//                self.navigationController?.pushViewController(FAQVC!, animated: true)
+                let privacyVC = self.storyboard?.instantiateViewController(withIdentifier: "privacyVC") as? PrivacyViewController
+                self.navigationController?.pushViewController(privacyVC!, animated: true)
             }
         }
     }

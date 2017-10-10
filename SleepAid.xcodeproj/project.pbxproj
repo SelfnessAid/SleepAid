@@ -36,6 +36,8 @@
 		4BE46F921D0ACCE9002F94B1 /* NotifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE46F911D0ACCE9002F94B1 /* NotifyViewController.swift */; };
 		4DAFD8ED92A44F9CA37B19E8 /* Pods_SleepAidUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 497B519AE1FFBC5BD52453AC /* Pods_SleepAidUITests.framework */; };
 		71C532BA562439359D9AC6E9 /* Pods_SleepAidTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF22B000371B95BC46F39F54 /* Pods_SleepAidTests.framework */; };
+		8438F0BA1F8C10520036502F /* PrivacyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8438F0B91F8C10520036502F /* PrivacyViewController.swift */; };
+		8438F0BC1F8C13E70036502F /* SleepAid_Privacy.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8438F0BB1F8C13E70036502F /* SleepAid_Privacy.txt */; };
 		DA050D3373E37A51621FB5EF /* Pods_SleepAid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 832EB18AA643A593F6A66431 /* Pods_SleepAid.framework */; };
 /* End PBXBuildFile section */
 
@@ -96,6 +98,8 @@
 		6563DA6A11E5018529CF50FE /* Pods-SleepAid.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SleepAid.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SleepAid/Pods-SleepAid.debug.xcconfig"; sourceTree = "<group>"; };
 		832EB18AA643A593F6A66431 /* Pods_SleepAid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SleepAid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8345CA3E2340C079601D6ADA /* Pods-SleepAidUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SleepAidUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SleepAidUITests/Pods-SleepAidUITests.release.xcconfig"; sourceTree = "<group>"; };
+		8438F0B91F8C10520036502F /* PrivacyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivacyViewController.swift; sourceTree = "<group>"; };
+		8438F0BB1F8C13E70036502F /* SleepAid_Privacy.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SleepAid_Privacy.txt; sourceTree = "<group>"; };
 		8E33CC9755EB3AF8D3982D89 /* Pods-SleepAid.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SleepAid.release.xcconfig"; path = "Pods/Target Support Files/Pods-SleepAid/Pods-SleepAid.release.xcconfig"; sourceTree = "<group>"; };
 		C92CE89F39C82769AD96474C /* Pods-SleepAidTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SleepAidTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SleepAidTests/Pods-SleepAidTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DF22B000371B95BC46F39F54 /* Pods_SleepAidTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SleepAidTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -148,6 +152,7 @@
 				4B0E93721D13923000B6409B /* CustomTabBarController.swift */,
 				4B0E93741D139DC100B6409B /* CustomNavigationBarController.swift */,
 				4B2B54FD1D19F2AC0037A338 /* SelectMusicTableViewCell.swift */,
+				8438F0B91F8C10520036502F /* PrivacyViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -204,6 +209,7 @@
 				4BE22A191D026F2E00A710F8 /* AppDelegate.swift */,
 				4BE22A1F1D026F2E00A710F8 /* Main.storyboard */,
 				4BE22A221D026F2E00A710F8 /* Assets.xcassets */,
+				8438F0BB1F8C13E70036502F /* SleepAid_Privacy.txt */,
 				4BE22A241D026F2E00A710F8 /* LaunchScreen.storyboard */,
 				4BE22A271D026F2E00A710F8 /* Info.plist */,
 			);
@@ -374,6 +380,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B216E571D14A33900F8F786 /* To the end of the world.mp3 in Resources */,
+				8438F0BC1F8C13E70036502F /* SleepAid_Privacy.txt in Resources */,
 				4BE22A261D026F2E00A710F8 /* LaunchScreen.storyboard in Resources */,
 				4BE22A231D026F2E00A710F8 /* Assets.xcassets in Resources */,
 				4B0E93781D13AAAD00B6409B /* Sleep Peacefully Alarm.mp3 in Resources */,
@@ -570,6 +577,7 @@
 				4BB2654B1D0D46F4008A9E63 /* FAQViewController.swift in Sources */,
 				4BB2654D1D0D50D5008A9E63 /* AnswerViewController.swift in Sources */,
 				4BB40D631D08980200AA1F9C /* Alarm.swift in Sources */,
+				8438F0BA1F8C10520036502F /* PrivacyViewController.swift in Sources */,
 				4B196EB01D048D9100A2B61C /* AlarmViewTableCell.swift in Sources */,
 				4BB40D6E1D09878900AA1F9C /* PlayMusicViewController.swift in Sources */,
 				4BE46F921D0ACCE9002F94B1 /* NotifyViewController.swift in Sources */,
@@ -677,7 +685,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "16681ab5-689f-4e89-93ea-d31c79f1f71e";
+				PROVISIONING_PROFILE = "17756182-dc37-4136-892b-5af8da7e8d96";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -717,7 +725,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "16681ab5-689f-4e89-93ea-d31c79f1f71e";
+				PROVISIONING_PROFILE = "17756182-dc37-4136-892b-5af8da7e8d96";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -728,14 +736,14 @@
 			baseConfigurationReference = 6563DA6A11E5018529CF50FE /* Pods-SleepAid.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Denzil Dsa (7QR55KXJG8)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: AudioBitts Inc (LNTQ8F2RSX)";
 				INFOPLIST_FILE = SleepAid/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.AudioBittsInc.SleepDeeply;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "9c1f418c-d355-4f3e-b251-7c11a5860e60";
-				PROVISIONING_PROFILE_SPECIFIER = sleep_deeply_development_provisioning;
+				PROVISIONING_PROFILE = "17756182-dc37-4136-892b-5af8da7e8d96";
+				PROVISIONING_PROFILE_SPECIFIER = sleep_appStore_provisioning;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -745,14 +753,14 @@
 			baseConfigurationReference = 8E33CC9755EB3AF8D3982D89 /* Pods-SleepAid.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Denzil Dsa (7QR55KXJG8)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: AudioBitts Inc (LNTQ8F2RSX)";
 				INFOPLIST_FILE = SleepAid/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.AudioBittsInc.SleepDeeply;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "9c1f418c-d355-4f3e-b251-7c11a5860e60";
-				PROVISIONING_PROFILE_SPECIFIER = sleep_deeply_development_provisioning;
+				PROVISIONING_PROFILE = "17756182-dc37-4136-892b-5af8da7e8d96";
+				PROVISIONING_PROFILE_SPECIFIER = sleep_appStore_provisioning;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

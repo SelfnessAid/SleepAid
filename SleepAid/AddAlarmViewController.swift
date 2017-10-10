@@ -312,7 +312,7 @@ class AddAlarmViewController: UITableViewController {
         
         Common.sharedInstance.setCurAlarmTime(Time)
         
-        let alarm = Alarm(UUID: UUID().uuidString,date: dataPicker.date, time: Common.sharedInstance.getCurAlarmTime(), title: Common.sharedInstance.getCurAlarmTitle(), repeatDays: Common.sharedInstance.getCurRepeatDays(), isActive: true)
+        let alarm = Alarm(UUID: UUID().uuidString,date: dataPicker.date, time: Common.sharedInstance.getCurAlarmTime(), title: Common.sharedInstance.getCurAlarmTitle(), repeatDays: Common.sharedInstance.getCurRepeatDays(), isActive: true, isAM: Common.sharedInstance.getIsAM())
         AlarmList.sharedInstance.addAlarm(alarm) // schedule a local notification to persist this item
         
         _ = self.navigationController?.popViewController(animated: true);

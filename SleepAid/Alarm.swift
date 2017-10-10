@@ -35,7 +35,7 @@ class Alarm {
         self.fireDate = Date()
     }
     
-    init (UUID: String = Foundation.UUID().uuidString,date: Date, time: String, title: String, repeatDays: String, isActive: Bool) {
+    init (UUID: String = Foundation.UUID().uuidString,date: Date, time: String, title: String, repeatDays: String, isActive: Bool, isAM: String) {
 //        let dateFormatter: NSDateFormatter = NSDateFormatter()
 //        dateFormatter.locale = NSLocale.currentLocale()
 //        dateFormatter.dateFormat = "HH:mm:ss";
@@ -47,7 +47,7 @@ class Alarm {
         self.time = time
         self.title = title
         self.repeatDays = repeatDays
-        self.isAM = "AM"
+        self.isAM = isAM
         self.fireDate = date
     }
     
