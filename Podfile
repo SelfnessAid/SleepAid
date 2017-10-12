@@ -11,6 +11,7 @@ target 'SleepAid' do
   pod 'FBSDKShareKit'
   pod 'FacebookCore'
   pod 'IQKeyboardManagerSwift', '4.0.8'
+  pod 'SVProgressHUD'
 
   target 'SleepAidTests' do
     inherit! :search_paths

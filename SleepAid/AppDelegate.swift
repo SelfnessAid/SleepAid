@@ -8,6 +8,7 @@
 
 import UIKit
 import IQKeyboardManagerSwift
+import SVProgressHUD
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -23,6 +24,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         ]
         
         UIBarButtonItem.appearance().setTitleTextAttributes([NSFontAttributeName: UIFont.systemFont(ofSize: 16)], for: .normal)
+        
+        SVProgressHUD.setDefaultStyle(.custom)
+        SVProgressHUD.setDefaultMaskType(.black)
+//        SVProgressHUD.setForegroundColor(.white)
+        SVProgressHUD.setForegroundColor(UIColor.init(red: 240/255, green: 158/255, blue: 0, alpha: 1.0))
+        SVProgressHUD.setBackgroundColor(.clear)
         
         IQKeyboardManager.sharedManager().enable = true
         return true
