@@ -738,15 +738,15 @@
 			baseConfigurationReference = 6563DA6A11E5018529CF50FE /* Pods-SleepAid.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: AudioBitts Inc (LNTQ8F2RSX)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Denzil Dsa (7QR55KXJG8)";
 				DEVELOPMENT_TEAM = LNTQ8F2RSX;
 				INFOPLIST_FILE = SleepAid/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.AudioBittsInc.SleepDeeply;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "17756182-dc37-4136-892b-5af8da7e8d96";
-				PROVISIONING_PROFILE_SPECIFIER = sleep_appStore_provisioning;
+				PROVISIONING_PROFILE = "9c1f418c-d355-4f3e-b251-7c11a5860e60";
+				PROVISIONING_PROFILE_SPECIFIER = sleep_deeply_development_provisioning;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -756,15 +756,15 @@
 			baseConfigurationReference = 8E33CC9755EB3AF8D3982D89 /* Pods-SleepAid.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: AudioBitts Inc (LNTQ8F2RSX)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Denzil Dsa (7QR55KXJG8)";
 				DEVELOPMENT_TEAM = LNTQ8F2RSX;
 				INFOPLIST_FILE = SleepAid/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.AudioBittsInc.SleepDeeply;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "17756182-dc37-4136-892b-5af8da7e8d96";
-				PROVISIONING_PROFILE_SPECIFIER = sleep_appStore_provisioning;
+				PROVISIONING_PROFILE = "9c1f418c-d355-4f3e-b251-7c11a5860e60";
+				PROVISIONING_PROFILE_SPECIFIER = sleep_deeply_development_provisioning;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

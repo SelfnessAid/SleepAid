@@ -9,6 +9,7 @@
 import UIKit
 import IQKeyboardManagerSwift
 import SVProgressHUD
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,8 +18,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        let settings = UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil)
-        UIApplication.shared.registerUserNotificationSettings(settings)
+//        let settings = UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil)
+//        UIApplication.shared.registerUserNotificationSettings(settings)
+//        
+        let center = UNUserNotificationCenter.current()
+        center.requestAuthorization(options: [.alert, .badge, .sound]) { (granted, error) in
+            
+        }
         
         UINavigationBar.appearance().titleTextAttributes = [ NSFontAttributeName: UIFont.boldSystemFont(ofSize: 20.0), NSForegroundColorAttributeName: UIColor.init(red: 240/255, green: 158/255, blue: 0, alpha: 1.0)
         ]
@@ -27,7 +33,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         SVProgressHUD.setDefaultStyle(.custom)
         SVProgressHUD.setDefaultMaskType(.black)
-//        SVProgressHUD.setForegroundColor(.white)
         SVProgressHUD.setForegroundColor(UIColor.init(red: 240/255, green: 158/255, blue: 0, alpha: 1.0))
         SVProgressHUD.setBackgroundColor(.clear)
         
@@ -64,6 +69,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //    override func applicationDidBecomeActive(application: UIApplication) {
 //        NSNotificationCenter.defaultCenter().postNotificationName("AlarmListShouldRefresh", object: self)
 //    }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        completionHandler(UNNotificationPresentationOptions.alert)
+    }
 
 }
 

@@ -12,7 +12,7 @@ import SVProgressHUD
 
 class SettingsViewController: UITableViewController {
     
-    let items = [["About Barry Zecca"], ["Share on Facebook", "Share on Twitter"], ["Terms of use"]]
+    let items = [["About Barry Zecca"], ["Terms of use"]]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +39,7 @@ class SettingsViewController: UITableViewController {
      */
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 3
+        return 2
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -80,41 +80,41 @@ class SettingsViewController: UITableViewController {
                 let AboutAuthorVC = self.storyboard?.instantiateViewController(withIdentifier: "AboutAuthorViewControllerIndentifier") as? AboutAuthorViewController
                 self.navigationController?.pushViewController(AboutAuthorVC!, animated: true)
             }
+//        } else if indexPath.section == 1 {
+//            SVProgressHUD.show()
+//            let appURL = "https://itunes.apple.com/us/app/sleep-deeply-a-relaxation/id1288596499?mt=8"
+//            let initText = "Nice app"
+//            if indexPath.row == 0 {
+//                if SLComposeViewController.isAvailable(forServiceType: SLServiceTypeFacebook) {
+//                    SVProgressHUD.dismiss()
+//                    let facebookShare = SLComposeViewController(forServiceType: SLServiceTypeFacebook)!
+//                    facebookShare.setInitialText(initText)
+//                    facebookShare.add(URL(string: appURL))
+//                    self.present(facebookShare, animated: true, completion: nil)
+//                } else {
+//                    SVProgressHUD.dismiss()
+//                    let alert = UIAlertController(title: "Notice", message: "You have no facebook application on your device. Please install it and try again.", preferredStyle: .alert)
+//                    let okAct = UIAlertAction(title: "OK", style: .default, handler: nil)
+//                    alert.addAction(okAct)
+//                    self.present(alert, animated: true, completion: nil)
+//                }
+//            } else if indexPath.row == 1 {
+//                
+//                if SLComposeViewController.isAvailable(forServiceType: SLServiceTypeTwitter) {
+//                    SVProgressHUD.dismiss()
+//                    let twitterShare = SLComposeViewController(forServiceType: SLServiceTypeTwitter)!
+//                    twitterShare.setInitialText(initText)
+//                    twitterShare.add(URL(string: appURL))
+//                    self.present(twitterShare, animated: true, completion: nil)
+//                } else {
+//                    SVProgressHUD.dismiss()
+//                    let alert = UIAlertController(title: "Notice", message: "You have no twitter application on your device. Please install it and try again.", preferredStyle: .alert)
+//                    let okAct = UIAlertAction(title: "OK", style: .default, handler: nil)
+//                    alert.addAction(okAct)
+//                    self.present(alert, animated: true, completion: nil)
+//                }
+//            }
         } else if indexPath.section == 1 {
-            SVProgressHUD.show()
-            let appURL = "https://itunes.apple.com/us/app/sleep-deeply-a-relaxation/id1288596499?mt=8"
-            let initText = "Nice app"
-            if indexPath.row == 0 {
-                if SLComposeViewController.isAvailable(forServiceType: SLServiceTypeFacebook) {
-                    SVProgressHUD.dismiss()
-                    let facebookShare = SLComposeViewController(forServiceType: SLServiceTypeFacebook)!
-                    facebookShare.setInitialText(initText)
-                    facebookShare.add(URL(string: appURL))
-                    self.present(facebookShare, animated: true, completion: nil)
-                } else {
-                    SVProgressHUD.dismiss()
-                    let alert = UIAlertController(title: "Notice", message: "You have no facebook application on your device. Please install it and try again.", preferredStyle: .alert)
-                    let okAct = UIAlertAction(title: "OK", style: .default, handler: nil)
-                    alert.addAction(okAct)
-                    self.present(alert, animated: true, completion: nil)
-                }
-            } else if indexPath.row == 1 {
-                
-                if SLComposeViewController.isAvailable(forServiceType: SLServiceTypeTwitter) {
-                    SVProgressHUD.dismiss()
-                    let twitterShare = SLComposeViewController(forServiceType: SLServiceTypeTwitter)!
-                    twitterShare.setInitialText(initText)
-                    twitterShare.add(URL(string: appURL))
-                    self.present(twitterShare, animated: true, completion: nil)
-                } else {
-                    SVProgressHUD.dismiss()
-                    let alert = UIAlertController(title: "Notice", message: "You have no twitter application on your device. Please install it and try again.", preferredStyle: .alert)
-                    let okAct = UIAlertAction(title: "OK", style: .default, handler: nil)
-                    alert.addAction(okAct)
-                    self.present(alert, animated: true, completion: nil)
-                }
-            }
-        } else if indexPath.section == 2 {
             if indexPath.row == 0 {
                 let privacyVC = self.storyboard?.instantiateViewController(withIdentifier: "privacyVC") as? PrivacyViewController
                 self.navigationController?.pushViewController(privacyVC!, animated: true)

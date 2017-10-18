@@ -17,6 +17,7 @@ class Alarm {
     fileprivate(set) var isAM: String
     fileprivate(set) var isActive: Bool
     fileprivate(set) var fireDate:Date
+    var music: String
     
     enum Transportation: String {
         case Automobile = "Automobile"
@@ -33,14 +34,10 @@ class Alarm {
         self.repeatDays = ""
         self.isAM = "AM"
         self.fireDate = Date()
+        self.music = "To the end of the world"
     }
     
-    init (UUID: String = Foundation.UUID().uuidString,date: Date, time: String, title: String, repeatDays: String, isActive: Bool, isAM: String) {
-//        let dateFormatter: NSDateFormatter = NSDateFormatter()
-//        dateFormatter.locale = NSLocale.currentLocale()
-//        dateFormatter.dateFormat = "HH:mm:ss";
-//        let strTime: String = dateFormatter.stringFromDate(date);
-//        NSLog("%@", strTime)
+    init (UUID: String = Foundation.UUID().uuidString,date: Date, time: String, title: String, repeatDays: String, isActive: Bool, isAM: String, music: String) {
         
         self.UUID = UUID
         self.isActive = isActive
@@ -49,6 +46,7 @@ class Alarm {
         self.repeatDays = repeatDays
         self.isAM = isAM
         self.fireDate = date
+        self.music = music
     }
     
     init (copiedAlarm: Alarm) {
@@ -59,6 +57,7 @@ class Alarm {
         self.repeatDays = copiedAlarm.repeatDays
         self.isAM = copiedAlarm.isAM
         self.fireDate = copiedAlarm.fireDate
+        self.music = copiedAlarm.music
     }
     
     /* METHODS */
